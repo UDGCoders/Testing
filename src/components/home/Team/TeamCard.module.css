@@ -1,0 +1,54 @@
+.mainCard {
+  position: relative;
+  border: 1px solid #4A5565;
+  padding: 30px 20px;
+  transition: transform 0.2s ease;
+      backdrop-filter: blur(1px);
+}
+.mainCard:hover{
+    background-color: #ffffff;
+    scale: 1.03;
+}
+.subCard {
+  width: 100%;
+  z-index: 2;
+}
+.mainCard:hover .name{
+    color: black;
+}
+.mainCard:hover .role{
+    color: rgb(70, 70, 70);
+}
+.role {
+  font-family: 'Inter',;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 24px;
+  color: #FFFFFF4D;
+}
+
+.name {
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.contentArea {
+  margin-top: 15px;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #BEBEBE;
+  padding: 0;
+}
+.mainCard:hover .description{
+    color: rgb(70, 70, 70);
+}

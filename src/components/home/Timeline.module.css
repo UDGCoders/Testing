@@ -1,0 +1,93 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  padding: 100px 0;
+}
+
+.timelineContainer {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The Line in the Center */
+.lineTrack {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 96%;
+  background-color: black;
+  z-index: 1;
+  border: 1px solid white;
+  border-radius: 14px;
+  padding: 2px;
+  margin-top: 1%;;
+}
+
+.lineFill {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform-origin: top;
+  border-radius: 16px;
+}
+
+/* The Row holding two cards */
+.timelineRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 80px; 
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  width: calc(50% - 40px); /* Half width minus some margin for the center line */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.imageCard { padding: 0; }
+.textPadding { padding: 25px; }
+
+.cardImg {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+h3{
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1.3em;
+  font-family: 'Inter';
+}
+p{
+  margin: 0;
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 400;
+}
+/* Mobile: Stack them again */
+@media (max-width: 768px) {
+  .lineTrack { left: 10px; transform: none; }
+  
+  .timelineRow {
+    flex-direction: column;
+    /* align-items: flex-start; */
+    padding-left: 40px;
+    gap: 20px;
+  }
+
+  .card { width: 95%; }
+  h3{
+    font-size: 20px;
+    line-height: 1.3em;
+  }
+  .cardImg{
+    height: auto;
+  }
+}

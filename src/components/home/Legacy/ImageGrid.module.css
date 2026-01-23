@@ -1,0 +1,44 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(2, auto);    /* 2 rows */
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gridBox {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  /* transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease; */
+  aspect-ratio: 1 / 1;
+  border: 1px solid #FFFFFF33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gridBox:hover{
+    background-color: #fff;
+}
+
+
+/* When the box is clicked (Active State) */
+.active {
+  transform: scale(1.1); /* Grows the box */
+  z-index: 10; /* Ensures it grows on top of others */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.active .gridImage {
+    width: 35%;
+  height: 35%;
+  object-fit: contain;
+  /* You can add a fade-in effect here if you like */
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}

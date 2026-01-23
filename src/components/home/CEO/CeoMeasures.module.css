@@ -1,0 +1,31 @@
+.container-fluid{
+    margin-top: 80px;
+    background:linear-gradient(rgba(0, 0, 0, 0.8)30%, rgba(0, 0, 0, 0.8)), url(http://rmaac.local/wp-content/uploads/2026/01/268359b471b312f7e5fb241c708ac10c696c7302-scaled.webp);
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+}
+h2{
+    line-height: 1.3em;
+    font-size: 50px;
+    font-weight: 400;
+}
+.smallTitle{
+    font-family: 'Italiana';
+    font-weight: 400;
+
+}
+.bigtitle{
+    font-family: 'Inter';
+}
+.mt-5{
+    margin-top: 40px !important;
+}
+p{
+    margin-top: 20px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2em;
+}

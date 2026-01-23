@@ -1,0 +1,11 @@
+.primaryButton{
+    border-top: 1px solid #ffffff !important;
+    border-bottom: 1px solid #ffffff !important;
+    font-family: 'Inter';
+    font-weight: 500;
+    padding: 20px;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}

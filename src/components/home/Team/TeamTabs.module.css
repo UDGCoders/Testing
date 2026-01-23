@@ -1,0 +1,40 @@
+/* TabSection.module.css */
+.tabButton {
+    margin-top: 40px;
+    background: transparent;
+    border: 2px solid #707070;
+    font-size: 1.1rem;
+    font-family: 'Inter';
+    /* Using your Inter font */
+    font-weight: 500;
+    color: #fff;
+    flex: 1;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px 30px;
+    backdrop-filter: blur(1px);
+}
+
+
+
+.contentWrapper {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.contentText {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

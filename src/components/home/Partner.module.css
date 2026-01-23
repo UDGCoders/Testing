@@ -1,0 +1,107 @@
+.accordionContainer {
+    font-family: 'Inter', sans-serif;
+    background: transparent;
+    color: white;
+}
+
+.customItem {
+    background: transparent;
+    /* Full width bottom border */
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3); 
+    padding: 20px 0;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+/* Container for the Question and Arrow */
+.headerWrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+.content{
+    display:flex;
+}
+/* The Arrow Circle */
+.arrowCircle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: grey;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.questionText {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+    color: grey;
+}
+
+/* Hidden Answer Section */
+.customBody {
+    opacity: 0;
+    width: 75%;
+    padding-left: 80px ; 
+    transition: max-height 0.5s ease, opacity 0.4s ease, margin 0.4s ease;
+}
+.custombody p{
+    font-size: 20px;
+    font-family: 'Inter';
+}
+/* --- HOVER STATES --- */
+
+.customItem:hover {
+    border-bottom: 1px solid white; 
+    transition: 1s ease;
+}
+.customItem:hover .questionText{
+    color:#fff;
+    transform: translateY(-5px);
+}
+.customItem:hover .arrowCircle {
+    border-color: white;
+    color: black;
+    transform: rotate(90deg);
+    background-color: #fff;
+}
+
+.customItem:hover .customBody {
+    opacity: 1;
+}
+
+.staticImage {
+    width: 136px;
+    max-width: 136px;
+    border-radius: 4px;
+    display: block;
+
+}
+@media screen and (max-width:768px) {
+    .arrowCircle{
+        display: none;
+    }
+    .customBody{
+        display: none;
+        width: 100%;
+        padding: 0;
+        margin-top: 10px;
+    }
+    .questionText{
+        font-size: 16px;
+    }
+    .customItem:hover .questionText{
+        transform: none;
+    }
+}

@@ -1,0 +1,20 @@
+.built{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.h2{
+    font-weight: 500;
+    font-family: 'Inter';
+    font-size: 50px;
+    line-height: 1.3em;
+}
+.p{
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    width: 65%;
+    line-height: 1.5em;
+}

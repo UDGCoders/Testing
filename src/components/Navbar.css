@@ -1,0 +1,10 @@
+.dropdown-menu{
+    background-color: black!important;
+    padding: 10px;
+}
+.dropdown-item{
+    color: #fff !important;
+}
+.dropdown-item:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+}

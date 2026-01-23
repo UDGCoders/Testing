@@ -1,0 +1,21 @@
+.impact{
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+.impact h2{
+    font-family: 'Inter';
+    font-size: 64px;
+    line-height: 1.3em;
+    font-weight: 400;
+    align-self: center;
+}
+@media screen and (max-width:768px) {
+    .impact h2{
+        font-size: 30px;
+        text-align: center;
+    }
+    .impact{
+        margin-top: 40px;
+    }
+}

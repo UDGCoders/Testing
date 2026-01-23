@@ -1,0 +1,44 @@
+.card {
+  width: 270px;
+  height: 270px;
+  padding: 30px; 
+  border-radius: 20px;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin:border-box;
+  margin: 0 10px;
+}
+
+.active {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000;
+  transform: scale(1);
+}
+
+.content {
+  text-align: center;
+}
+
+.content img {
+  width: 80px;
+  margin-bottom: 16px;
+}
+
+.content h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.content p {
+  margin-top: 8px;
+  font-size: 18px;
+}
