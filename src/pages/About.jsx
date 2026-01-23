@@ -6,6 +6,9 @@ const About = () => {
   return (
     <>
       <h2 className='text-center py-5'>About Rmaac</h2>
+      <div className="rounded-circle">
+        <p>&darr;</p>
+      </div>
     </>
   )
 }
