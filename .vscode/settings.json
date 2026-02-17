@@ -1,0 +1,6 @@
+{
+    "chatgpt.gpt3.apiKey": "",
+    "chatgpt.gpt3.reasoning.apiKey": "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",
+    "chatgpt.runCodexInWindowsSubsystemForLinux": true,
+    "chatgpt.openOnStartup": true
+}

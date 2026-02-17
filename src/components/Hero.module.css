@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.animatedText {
+  font-family: 'Italiana';
+  font-size: clamp(60px, 20vw, 170px);
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  max-width: 90vw;
+  overflow-wrap: anywhere;
+}
+.animatedTextSmall {
+  font-size: clamp(36px, 12vw, 120px);
+}
+
+.circle {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffffff26);
+  border: 2px solid rgba(255, 255, 255, 0.31);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  margin-top: -90px;
+}
+
+.arrow {
+  font-size: 36px;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .circle {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+  }
+
+  .arrow {
+    font-size: 28px;
+  }
+    .animatedText{
+        line-height: 1.3em;
+    }
+}

@@ -8,3 +8,73 @@
 .dropdown-item:hover{
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+.dropdown-menu.show {
+    animation: navbarDropdownIn 220ms ease-out;
+}
+
+.app-navbar-collapse.show {
+    animation: navbarPanelIn 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.app-navbar-contact {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+@keyframes navbarDropdownIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes navbarPanelIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.app-navbar {
+    position: relative;
+    z-index: 1000;
+}
+
+@media (max-width: 991.98px) {
+    .app-navbar {
+        position: sticky;
+        top: 0;
+        background-color: #000;
+    }
+
+    .app-navbar-toggler {
+        margin-top: 10px;
+        z-index: 1002;
+        position: relative;
+    }
+
+    .app-navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 1001;
+        background-color: #000;
+        padding: 0.75rem 1.5rem 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .app-navbar-contact {
+        margin-top: 14px;
+    }
+}

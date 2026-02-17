@@ -5,7 +5,7 @@ const CardTwo = (props) => {
     <>
     <div className={styles.card}>
         <div>
-            <img src={props.src} alt="our vision picture" className={`img-fluid ${styles.image}`} laoding='lazy' />
+            <img src={props.src} alt="our vision" className={`img-fluid ${styles.image}`} laoding='lazy' />
         </div>
         <div className={styles.content}>
             <h2>{props.title}</h2>

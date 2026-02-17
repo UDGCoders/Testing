@@ -1,73 +1,95 @@
-.hero{
-    height: 90vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Italiana';
-    font-size: 170px !important;
-    line-height: 1.3rem;
-    position: relative;
-    text-align: left;
-    padding-left: 40px;
+.hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Italiana";
+  font-size: 170px !important;
+  line-height: 1.3rem;
+  position: relative;
+  text-align: left;
+  padding-left: 40px;
+  font-display: swap;
+  /* margin: 0; */
+  /* padding: 0; */
 }
-.hero h2{
-    font-size: 170px !important;
-    line-height: 1.3rem;
-    text-align: left;
-    font-weight: 300;
-    font-family: 'Italiana';
+.hero .maintext {
+  font-size: clamp(72px,10vw,170px) !important;
+  line-height: 1.3rem;
+  text-align: left;
+  font-weight: 300;
+  font-family: "Italiana",serif;
+  font-display: swap;
 }
 .hero .fade-in-out {
-  animation: fadeInOut 2s ease-in;
+  animation: fadeInOut 3s ease-in;
 }
 
 @keyframes fadeInOut {
-  0% { opacity: 0; transform: translateY(10px); }
-  20% { opacity: 1; transform: translateY(0); }
-  80% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-1px); }
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-1px);
+  }
 }
 .hero .text-wrapper {
-    margin-top: 50px;
-    position: relative;
-    height: 170px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: left;
-    font-family: 'Italiana';
+  margin-top: 50px;
+  position: relative;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  font-family: "Italiana";
 }
 
 .hero .animated-text {
-    position: absolute;
-    white-space: nowrap;
-    text-transform: uppercase;
-    text-align: left;
-    font-weight: 300;
-    padding: 0;
-    font-family: 'Italiana';
+  margin-top: 170px;
+  position: absolute;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: 300;
+  padding: 0;
+  font-family: "Italiana",serif;
+  font-display: swap;
+  line-height: 1.3rem;
+
 }
-@media screen and (max-width:768px) {
-    .hero .animated-text{
-        font-size: 72px !important;
-        text-align: center;
-    }
-    .hero{
-        height: 90vh;
-        font-size: 72px !important;
-        padding-left: 0;
-        padding: 0 24px;
-    }
-    .hero h2{
-        font-size: 72px !important;
-        text-align: center;
-    }
-    .hero .text-wrapper {
-        margin-top: 20px;
-        height: 72px;
-        justify-content: center;
-    }
+@media screen and (max-width: 768px) {
+  .hero .animated-text {
+    /* font-size: 72px !important; */
+    text-align: center;
+    margin-top: 100px;
+  }
+  .hero {
+    height: 100vh;
+    font-size: 52px !important;
+    padding-left: 0;
+    /* padding: 0 24px; */
+  }
+  .hero .maintext {
+    font-size: 52px !important;
+    text-align: center;
+    margin-top: 0;
+  }
+  .hero .text-wrapper {
+    margin-top: 0;
+    height: 0;
+    justify-content: center;
+  }
 }

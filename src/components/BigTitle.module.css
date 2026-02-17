@@ -1,0 +1,13 @@
+.bigTitle {
+  font-family: "Inter";
+  font-size: clamp(28px, 4vw, 50px);
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+@media (max-width: 768px) {
+  .bigTitle {
+    line-height: 35px;
+  }
+}

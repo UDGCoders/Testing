@@ -1,67 +1,225 @@
-import React from 'react';
-import { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './Navbar.css';
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Navbar.css";
+
 function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-    return (
-        <>
-            <nav className="navbar navbar-expand-lg pt-4">
-                <div className="container">
-                    <a className="navbar-brand" href="/">
-                        <img src="wp-content/uploads/2026/01/Logo-2-1.webp" alt="rmaac logo" loading='eager'/>
-                    </a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarText">
-                        <ul className="navbar-nav ms-auto col-sm-9 justify-content-between me-auto">
-                            <li className="nav-item">
-                                <a className="nav-link active fw-medium text-light" aria-current="page" href="/">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link fw-medium text-light" href="/about">About Us</a>
-                            </li>
-                            <li
-                                className="nav-item dropdown"
-                                onMouseEnter={() => setIsOpen(true)}
-                                onMouseLeave={() => setIsOpen(false)}>
-                                <a
-                                    className="nav-link dropdown-toggle text-light fw-medium"
-                                    href="#"
-                                    role="button"
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setIsOpen(!isOpen);
-                                    }}>
-                                    What We Offer
-                                </a>
-                                {/* Conditional rendering for the dropdown menu */}
-                                <ul className={`dropdown-menu ${isOpen ? 'show' : ''}`} style={{ marginTop: 0 }}>
-                                    <li><a className="dropdown-item" href="#service1">REAL ESTATE DEVELOPMENT</a></li>
-                                    <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="#service2">IT SOLUTIONS</a></li>
-                                    <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="#service3">DIGITAL MARKETING</a></li>
-                                    <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="#service3">APPS DEVELOPMENT</a></li>
-                                </ul>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link text-light fw-medium" href="#">Porfolio</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link text-light fw-medium" href="#">Our Approach</a>
-                            </li>
-                        </ul>
-                        <span className="navbar-text text-light fw-medium border-bottom border-top p-3">
-                            Contact Us
-                        </span>
-                    </div>
-                </div>
-            </nav>
-        </>
-    );
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isPortfolioDropdownOpen, setIsPortfolioDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    setIsDropdownOpen(false);
+    setIsPortfolioDropdownOpen(false);
+  };
+
+  return (
+    <>
+      <nav className="navbar navbar-expand-lg app-navbar">
+        <div className="container">
+          <Link className="navbar-brand" to="/" onClick={closeMobileMenu}>
+            <img
+              src="/wp-content/uploads/Logo-2-1-1.webp"
+              alt="rmaac logo"
+              loading="eager"
+            />
+          </Link>
+          <button
+            className="navbar-toggler app-navbar-toggler"
+            type="button"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-controls="navbarText"
+            aria-expanded={isMobileMenuOpen}
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div
+            className={`collapse navbar-collapse app-navbar-collapse ${isMobileMenuOpen ? "show" : ""}`}
+            id="navbarText"
+          >
+            <ul className="navbar-nav ms-auto col-sm-9 justify-content-between me-auto">
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    `nav-link fw-medium text-light ${isActive ? "active" : ""}`
+                  }
+                  to="/"
+                  onClick={closeMobileMenu}
+                  end
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    `nav-link fw-medium text-light ${isActive ? "active" : ""}`
+                  }
+                  to="/about"
+                  onClick={closeMobileMenu}
+                >
+                  About Us
+                </NavLink>
+              </li>
+              <li
+                className="nav-item dropdown"
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
+                <NavLink
+                  className={({ isActive }) =>
+                    `nav-link dropdown-toggle text-light fw-medium ${isActive ? "active" : ""}`
+                  }
+                  to="/servicespage"
+                  onClick={closeMobileMenu}
+                >
+                  What We Offer
+                </NavLink>
+                {/* Conditional rendering for the dropdown menu */}
+                <ul
+                  className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}
+                  style={{ marginTop: 0 }}
+                >
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/itsolutionspage"
+                      onClick={closeMobileMenu}
+                    >
+                      REAL ESTATE DEVELOPMENT & IT SOLUTIONS
+                    </Link>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/digitalmarketingpage"
+                      onClick={closeMobileMenu}
+                    >
+                      Digital Marketing
+                    </Link>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/appdevelopmentpage"
+                      onClick={closeMobileMenu}
+                    >
+                      App Development
+                    </Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/realestatepgae"
+                      onClick={closeMobileMenu}
+                    >
+                      Real Estate & Investor Platforms
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li
+                className="nav-item dropdown"
+                onMouseEnter={() => setIsPortfolioDropdownOpen(true)}
+                onMouseLeave={() => setIsPortfolioDropdownOpen(false)}
+              >
+                  <NavLink
+                    className={({ isActive }) =>
+                      `nav-link dropdown-toggle text-light fw-medium ${isActive ? "active" : ""}`
+                    }
+                    to="/portfoliopage"
+                    onClick={closeMobileMenu}
+                  >
+                    Portfolio
+                  </NavLink>
+                  <ul
+                    className={`dropdown-menu ${isPortfolioDropdownOpen ? "show" : ""}`}
+                    style={{ marginTop: 0 }}
+                  >
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/automationpage"
+                        onClick={closeMobileMenu}
+                      >
+                        Automation & Cybersecurity
+                      </Link>
+                    </li>
+                    <li>
+                      <hr className="dropdown-divider" />
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/digitalsuccesspage"
+                        onClick={closeMobileMenu}
+                      >
+                        Digital Success
+                      </Link>
+                    </li>
+                    <li>
+                      <hr className="dropdown-divider" />
+                    </li>
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/realestateportfoliopage"
+                        onClick={closeMobileMenu}
+                      >
+                        Real Estate
+                      </Link>
+                    </li>
+                    <li>
+                      <hr className="dropdown-divider" />
+                    </li>
+                    
+                    
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/healthcarepage"
+                        onClick={closeMobileMenu}
+                      >
+                        Health Care
+                      </Link>
+                    </li>
+                  </ul>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link text-light fw-medium"
+                  to="/ourapproachpage"
+                  onClick={closeMobileMenu}
+                >
+                  Our Approach
+                </Link>
+              </li>
+            </ul>
+            <Link
+              className="navbar-text text-light fw-medium border-bottom border-top p-3 mt-3 mt-md-0 app-navbar-contact"
+              to="/contactpage"
+              onClick={closeMobileMenu}
+              style={{ textDecoration: 'none' }}
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
 }
 
 export default Navbar;

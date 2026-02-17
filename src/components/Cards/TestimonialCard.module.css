@@ -1,0 +1,24 @@
+.card{
+    background-color: #0B0D0F;
+    border-radius: 6px;
+    padding:40px;
+    /* margin: 20px 0 0 0; */
+}
+.image{
+    width: 15%;
+    margin-top: 20px;
+}
+.cardHeading{
+    font-size: 20px;
+    font-family: 'Inter';
+    font-weight: 600;
+}
+@media screen and (max-width:768px) {
+    .card{
+        width: 100%;
+        margin: 10px;
+    }
+    .image{
+        width: 50%;
+    }
+}

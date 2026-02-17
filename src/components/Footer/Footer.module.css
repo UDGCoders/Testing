@@ -1,7 +1,10 @@
 .footer{
     margin-top: 80px !important;
-    padding: 80px 0;
+    margin-inline: auto;
+    padding: 80px 0 0 0;
     background-color: #000000;
+    width: 100%;
+    max-width: 1440px;
 }
 .txtdescription{
     font-family: 'Inter';
@@ -9,9 +12,10 @@
     line-height: 1.5em !important;
     font-weight: 400;
     color: #BEBEBE;
+    font-display: swap;
 }
 .linkList{
-    margin-top: 40px;
+    margin-top: 24px;
 }
 .linkList li a{
     font-family: 'Inter';
@@ -20,12 +24,13 @@
     font-weight: 400;
     color: #BEBEBE !important;
     text-decoration: none !important;
+    font-display: swap;
 }
 .linkList li a:hover{
     color: #FFFFFF !important;
 }
 .linkList li{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .social{
     margin-top: 40px;
@@ -52,4 +57,7 @@
     font-weight: 400;
     color: #BEBEBE;
     margin: 0;
+    font-display: swap;
 }
+
+

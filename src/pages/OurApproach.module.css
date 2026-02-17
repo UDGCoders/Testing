@@ -1,0 +1,196 @@
+.page {
+  color: #ffffff;
+}
+
+.heroSplit {
+  padding-top: 18vh;
+}
+
+.heroContent {
+  max-width: 640px;
+}
+
+.heroTitleLine {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.secondaryBigTitle {
+  margin-top: 20px;
+}
+
+.secondaryPrimaryText {
+  margin-top: 40px;
+}
+
+.heroButton {
+  margin-top: 20px !important;
+}
+
+.investmentSection {
+  margin-top: 80px;
+}
+
+.investmentHeader {
+  margin-bottom: 20px;
+}
+
+.investmentImage {
+  margin-top: 40px;
+}
+
+.investmentTitleLine {
+  display: flex;
+  align-items: baseline;
+  column-gap: 10px;
+  row-gap: 4px;
+  flex-wrap: wrap;
+}
+
+.investmentTitleLine h2 {
+  margin: 0;
+  white-space: normal;
+}
+
+.investmentPrimaryText {
+  margin-top: 40px;
+}
+
+.strategicModelSection {
+  margin-top: 80px;
+}
+
+.strategicTitleLine {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  column-gap: 10px;
+  row-gap: 4px;
+  flex-wrap: wrap;
+}
+
+.strategicTitleLine h2 {
+  margin: 0;
+}
+
+.strategicIntro {
+  margin-top: 10px;
+}
+
+.stepsSection {
+  padding: 72px 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.stepsIntro {
+  max-width: 780px;
+  margin: 10px auto 0;
+}
+
+.stepsGrid {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.stepCard {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 22px 22px 18px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  min-height: 240px;
+}
+
+.stepNo {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  color: #00c950;
+  margin-bottom: 10px;
+}
+
+.stepTitle {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.stepText {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.92;
+  margin: 0;
+}
+
+.stepList {
+  margin: 14px 0 0;
+  padding-left: 18px;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.ctaSection {
+  padding: 72px 0 88px;
+}
+
+.ctaCard {
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 34px 24px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.ctaText {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.ctaButton {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 992px) {
+  .stepsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .heroSplit {
+    padding-top: 14vh;
+  }
+
+  .investmentSection {
+    margin-top: 40px;
+  }
+
+  .strategicModelSection {
+    margin-top: 40px;
+  }
+
+  .stepsSection {
+    padding: 56px 0;
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}

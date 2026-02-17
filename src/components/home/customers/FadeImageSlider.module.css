@@ -1,0 +1,16 @@
+.fadeSlider {
+    position: relative;
+}
+
+.fadeImage {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 250px
+}
+
+.active {
+    opacity: 1;
+    position: relative;
+}

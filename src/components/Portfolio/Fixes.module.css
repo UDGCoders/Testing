@@ -1,0 +1,12 @@
+.fixesSection {
+  margin-top: 80px;
+  padding: 80px 54px;
+  background-color: #000;
+}
+
+@media (max-width: 768px) {
+  .fixesSection {
+    margin-top: 40px;
+    padding: 40px 24px;
+  }
+}

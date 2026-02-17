@@ -71,7 +71,7 @@ const BackgroundDots = () => {
         left: 0,
         width: '100%',
         height: '100%',
-        zIndex: -1, // Sits behind your carousel
+        zIndex: -10, // Visible above background video, below content overlays
         pointerEvents: 'none', // Allows clicks to pass through to the carousel
         backgroundColor: 'transparent'
       }}

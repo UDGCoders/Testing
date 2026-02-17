@@ -6,19 +6,28 @@ const Timeline = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end end"]
+    offset: ['start end', 'end end'],
   });
 
   const scaleY = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
   const cards = [
-    { id: 1, image: "wp-content/uploads/2026/01/new-1.webp" },
-    { id: 2, title: "RMAAC GROUP TO ATTEND DATTOCON 25 - Leading MSP Conference", weekdays:"Monday to Wednesday",startingYear:"Oct 6 to 8, 2025" },
-    { id: 3, title: "RMAAC Launches AI Chatbots & Voice Receptionists ", weekdays:"Saturday to Monday",startingYear:"Sep 6 to 8, 2025" },
-    { id: 4, image: "wp-content/uploads/2026/01/new-2-1.webp" },
+    { id: 1, image: '/wp-content/uploads/new-1.webp' },
+    {
+      id: 2,
+      title: 'RMAAC Launches AI Chatbots & Voice Receptionists',
+      weekdays: 'Saturday to Monday',
+      startingYear: 'Sep 6 to 8, 2025',
+    },
+    {
+      id: 3,
+      title: 'RMAAC GROUP TO ATTEND DATTOCON 25 - Leading MSP Conference',
+      weekdays: 'Monday to Wednesday',
+      startingYear: 'Oct 6 to 8, 2025',
+    },
+    { id: 4, image: '/wp-content/uploads/new-2-1.webp' },
   ];
 
-  // Logic to group cards into pairs: [[1, 2], [3, 4]]
   const groupedCards = [];
   for (let i = 0; i < cards.length; i += 2) {
     groupedCards.push(cards.slice(i, i + 2));
@@ -26,9 +35,7 @@ const Timeline = () => {
 
   return (
     <div className={styles.wrapper} ref={containerRef}>
-      <div className={styles.timelineContainer}>
-        
-        {/* Central Vertical Line */}
+      <div className={`container ${styles.timelineContainer}`}>
         <div className={styles.lineTrack}>
           <motion.div className={styles.lineFill} style={{ scaleY }} />
         </div>
@@ -44,18 +51,29 @@ const Timeline = () => {
                 viewport={{ once: true }}
               >
                 {card.image ? (
-                  <img src={card.image} alt={card.title} className={styles.cardImg} loading='dynamic' />
+                  <img
+                    src={card.image}
+                    alt={card.title || `Timeline visual ${card.id}`}
+                    className={styles.cardImg}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 ) : (
                   <div className={styles.textPadding}>
                     <h3>{card.title}</h3>
-                    <div className="time" style={{ display: "flex",gap: "15px",marginTop:"20px" }}>
-                        <div className="image">
-                            <img src="wp-content/uploads/2026/01/date.webp" alt="calendar logo" loading="lazy" />
-                        </div>
-                        <div className="content">
-                        <p className='weekdays'>{card.weekdays}</p>
-                        <p className='starting year'>{card.startingYear}</p>
-                        </div>
+                    <div className={styles.timeMeta}>
+                      <div className={styles.timeIconWrap}>
+                        <img
+                          src="/wp-content/uploads/date.webp"
+                          alt="calendar logo"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
+                      <div>
+                        <p className={styles.weekdays}>{card.weekdays}</p>
+                        <p className={styles.startingYear}>{card.startingYear}</p>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -63,7 +81,6 @@ const Timeline = () => {
             ))}
           </div>
         ))}
-        
       </div>
     </div>
   );

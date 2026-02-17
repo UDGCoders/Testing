@@ -10,7 +10,7 @@ const SliderCard = ({ title, year, image, active }) => {
         backgroundColor: active ? "white" : "transparent",
         backgroundImage: active 
           ? "none" 
-          : `url("wp-content/uploads/2026/01/0bd058d3db941a04d87931cfaea8cbad6e3af9d9.webp")`,
+          : `url("wp-content/uploads/0bd058d3db941a04d87931cfaea8cbad6e3af9d9.webp")`,
         padding: active ? "30px" : "0px",
         color: active ? "black" : "white",
       }}
@@ -19,7 +19,6 @@ const SliderCard = ({ title, year, image, active }) => {
         <img 
           src={image} 
           alt={title} 
-
           style={{ filter: active ? "invert(1)" : "none" }} 
         />
         <h3>{title}</h3>

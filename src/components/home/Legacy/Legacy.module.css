@@ -3,15 +3,21 @@
 }
 .bigtitle{
     font-family: 'Inter';
-    font-size: 50px;
+    font-size:clamp(28px,4vw,50px);
     font-weight: 500;
+
 }
 .smallTitle{
     font-family: 'Italiana';
-        font-size: 50px;
+    font-size:clamp(28px,4vw,50px);
     font-weight: 400;
 }
 p{
     font-family: 'Inter';
     font-size: 20px;
+}
+@media screen and (max-width:40px) {
+    .legacy{
+        margin-top: 40px;
+    }
 }

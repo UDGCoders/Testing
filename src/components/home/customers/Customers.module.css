@@ -1,29 +1,86 @@
-.customers{
-
+.customers {
     margin-top: 80px;
 }
-.role{
-    font-size: 50px;
-    font-family: 'Inter' ;
+
+.customer {
+    padding: 150px 0;
+    /* Ensure transitions are smooth if resizing window */
+    transition: padding 0.3s ease;
+}
+
+/* Make sure the text container handles the specific font styles */
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.role {
+    font-size: clamp(28px, 4vw, 50px);
+    font-family: 'Inter', serif;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
+    font-display: swap;
+    line-height: 1;
 }
-.name{
-    font-size: 50px;
+
+.name {
+    font-size: clamp(28px, 4vw, 50px);
     text-transform: uppercase;
-    font-family: 'Italiana';
+    font-family: 'Italiana', serif;
     padding: 0;
     margin: 0;
+    font-display: swap;
+    line-height: 1.2;
 }
-.customer{
-        padding: 150px 0;
-}
-.review{
+
+.review {
     width: 40%;
 }
-.review p{
-    font-weight: 500;
-    font-size: 24px;
+
+.review p {
+    font-weight: 400;
+    font-size: clamp(16px,4vw,24px);
     line-height: 33px !important;
+    margin-bottom: 0;
+}
+
+/* --- Mobile / Tablet Styles --- */
+@media screen and (max-width: 768px) {
+    .customers {
+        margin-top: 40px;
+        /* padding: 0 24px; */
+    }
+
+    .customer {
+        /* Reduce vertical padding significantly for mobile */
+        padding: 20px 0;
+        /* Force column layout instead of row */
+        flex-direction: column !important;
+        /* Override Bootstrap gap-5 (3rem) with something smaller */
+        gap: 20px !important; 
+        text-align: left;
+        margin: 0;
+    }
+
+    /* Target the text container */
+    .text {
+        width: 100% !important; /* Override w-md-50 */
+    }
+
+    .review {
+        width: 100% !important;
+        height: auto;
+    }
+
+
+
+    /* Keep user preference to hide image on mobile. 
+       If you want to show it, remove 'display: none' 
+       and set width to 100%. 
+    */
+    .image {
+        display: none; 
+    }
 }

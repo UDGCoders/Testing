@@ -6,55 +6,55 @@ import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-sv
 const Footer = () => {
     return (
         <>
-            <div className={`container-fluid ${styles.footer}`}>
-                <div className={`container `}>
-                    <div className="row g-3 ">
+            <div className={`container-fluid bg-black`}>
+                <div className={`container-fluid px-0 ${styles.footer}`}>
+                    <div className="row g-0">
                         <div className="col-sm-5">
-                            <img src="http://rmaac.local/wp-content/uploads/2026/01/Logo-2-1.webp" alt="company logo" className='img-fluid' />
-                            <p className={`${styles.txtdescription} w-75`}>From code to concrete — RMAAC reshapes industries through digital, healthcare, AI, and real estate innovation.</p>
+                            <img src="/wp-content/uploads/Logo-2-1-1.webp" alt="company logo" className='img-fluid' />
+                            <p className={`${styles.txtdescription} mt-3 w-75`}>From code to concrete — RMAAC reshapes industries through digital, healthcare, AI, and real estate innovation.</p>
                             <PrimaryButton btntxt="Get Started" />
                         </div>
 
-                        <div className="col-sm-2 flex-grow-1">
+                        <div className="col-sm-2 flex-grow-1 mt-md-0 mt-4">
                             <h5 className={`styles.heading`}>Quick Links</h5>
                             <ul className={`list-unstyled ${styles.linkList}`}>
                                 <li>
                                     <a href="/" className=' text-decoration-none text-light-emphasis'>Home</a>
                                 </li>
                                 <li>
-                                    <a href="/" className=' text-decoration-none text-light-emphasis'>About</a>
+                                    <a href="/about" className=' text-decoration-none text-light-emphasis'>About</a>
                                 </li>
                                 <li>
-                                    <a href="/" className=' text-decoration-none text-light-emphasis'>Services</a>
+                                    <a href="/servicespage" className=' text-decoration-none text-light-emphasis'>Services</a>
                                 </li>
                                 <li>
-                                    <a href="/" className=' text-decoration-none text-light-emphasis'>Portfolio</a>
+                                    <a href="/portfoliopage" className=' text-decoration-none text-light-emphasis'>Portfolio</a>
                                 </li>
                                 <li>
-                                    <a href="/" className=' text-decoration-none text-light-emphasis'>Case Studies</a>
+                                    <a href="/ourapproachpage" className=' text-decoration-none text-light-emphasis'>Case Studies</a>
                                 </li>
                             </ul>
                         </div>
                         <div className="col-sm-2  flex-grow-1">
-                            <h5 className={`styles.heading`}>Quick Links</h5>
-                            <p className={`${styles.txtdescription} w-75`}>
+                            <h5 className={`styles.heading`}>Address</h5>
+                            <p className={`${styles.txtdescription} mt-md-4 w-75`}>
                                 Plaza No. 31/32, 1st Floor, Westeria Road, Sector C, DHA 2 Islamabad.
                             </p>
                         </div>
                         <div className="col-sm-2 flex-grow-1">
-                            <h5 className={`styles.heading`}>Quick Links</h5>
+                            <h5 className={`styles.heading`}>Get in touch</h5>
                             <ul className={`list-unstyled ${styles.linkList}`}>
                                 <li>
-                                    <a href="/" className=' text-decoration-none text-light-emphasis'>+92 309 188 8879</a>
+                                    <a href="tel: +92 309 188 8879" className=' text-decoration-none text-light-emphasis'>+92 309 188 8879</a>
                                 </li>
                                 <li>
-                                    <a href="/" className=' text-decoration-none text-light-emphasis'>info@rmaacpk.com</a>
+                                    <a href="mailTo:info@rmaacpk.com" className=' text-decoration-none text-light-emphasis'>info@rmaacpk.com</a>
                                 </li>
 
                             </ul>
                         </div>
                     </div>
-                    <div className={`row ${styles.social} justify-content-between `}>
+                    <div className={`row g-0 ${styles.social} justify-content-between `}>
                         <div className="col-sm-6">
                             <p className={`${styles.txtdescriptions}`}>Copyright © 2025 Rmaacgroup. All Rights Reserved.
                             </p>

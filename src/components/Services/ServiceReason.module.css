@@ -1,0 +1,10 @@
+.container-fluid{
+    padding:80px 0;
+    background-color: #fff !important;
+    border-radius: 40px 40px 0 0;
+}
+.heading{
+    color: black;
+    /* display: flex; */
+    /* width: 50%; */
+}

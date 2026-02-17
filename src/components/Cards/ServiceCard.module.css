@@ -1,0 +1,70 @@
+/* Scoped classes */
+.card { 
+    background-color: #EEEEEE;
+    padding: 40px;
+    position: relative;
+    transition: all ease-in-out 0.3s; /* Moved here for smoother entry/exit */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.title { 
+    color: black; 
+    font-family: 'Inter', serif;
+    font-display: swap;
+    width: 60%;
+}
+
+.description {
+    color: #717171;
+    padding: 0;
+}
+
+.list {
+    padding: 10px 15px;
+    color: white;
+    font-family: 'Inter', serif;
+    font-display: swap;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.button {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    z-index: 99;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    border: none;
+    transition: all 0.3s;
+}
+
+/* Hover States using the new class names */
+.card:hover {
+    background-color: black;
+    transform: scale(1.05); /* Used transform: scale for better compatibility */
+}
+
+.card:hover .description {
+    color: white;
+}
+
+.card:hover .title {
+    color: white !important;
+}
+
+.card:hover .list {
+    opacity: 1;
+}
+
+.card:hover .button {
+    background-color: white;
+    color: black;
+    transform: rotate(-45deg);
+}

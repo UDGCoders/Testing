@@ -1,31 +1,68 @@
-.container-fluid{
+.container-fluid {
     margin-top: 80px;
-    background:linear-gradient(rgba(0, 0, 0, 0.8)30%, rgba(0, 0, 0, 0.8)), url(http://rmaac.local/wp-content/uploads/2026/01/268359b471b312f7e5fb241c708ac10c696c7302-scaled.webp);
-    background-position:top;
+    background: linear-gradient(rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.8)), url(http://rmaac.local/wp-content/uploads/268359b471b312f7e5fb241c708ac10c696c7302-scaled.webp);
+    background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 40px;
+    overflow-x: hidden;
 }
-h2{
+
+.container-fluid .container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container-fluid h2 {
     line-height: 1.3em;
-    font-size: 50px;
+    font-size: clamp(1.75rem, 5vw, 50px);
     font-weight: 400;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
-.smallTitle{
+
+.smallTitle {
     font-family: 'Italiana';
     font-weight: 400;
+    font-display: swap;
+}
 
-}
-.bigtitle{
+.bigtitle {
     font-family: 'Inter';
+    font-display: swap;
 }
-.mt-5{
-    margin-top: 40px !important;
-}
-p{
+
+.container-fluid p {
     margin-top: 20px;
     font-family: 'Inter';
     font-weight: 400;
-    font-size: 16px;
-    line-height: 2em;
+    font-size: clamp(0.875rem, 2vw, 16px);
+    line-height: 1.6em;
+    font-display: swap;
+}
+
+@media (max-width: 576px) {
+    .container-fluid {
+        margin-top: 40px;
+        padding-top: 24px;
+    }
+
+    .container-fluid .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container-fluid .row [class*="col-"] {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .container-fluid h2 {
+        font-size: clamp(1.5rem, 8vw, 2rem);
+    }
+
+    .container-fluid p {
+        font-size: 0.875rem;
+        line-height: 1.5em;
+    }
 }

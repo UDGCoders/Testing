@@ -1,0 +1,6 @@
+.primaryText{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size:clamp(16px,2vw,18px);
+    line-height: 1.5em;
+}

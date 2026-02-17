@@ -1,0 +1,17 @@
+.textWidth {
+  width: 65%;
+  display: flex; justify-content: center; align-items: center;
+}
+
+@media (max-width: 768px) {
+  .centeredContainer {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .textWidth {
+    width: 100%;
+  }
+}

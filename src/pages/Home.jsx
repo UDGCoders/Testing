@@ -13,9 +13,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Home() {
   const texts = ["Success", "INOVATIONS", "GROWTH"];
 
+  const Simg=["/wp-content/uploads/Testimonials-pics.webp","/wp-content/uploads/persons1.webp"]
   return (
     <>
-  
+      
       <div className="headerbackground h-100">
         <video
           autoPlay
@@ -23,8 +24,10 @@ function Home() {
           muted
           playsInline
           className="background-video"
+          preload="none"
+          loading="lazy"
         >
-          <source src="wp-content/uploads/2026/01/bg-video.mp4" type="video/mp4" />
+          <source src="/wp-content/uploads/GettyImages-1309565446-1.mp4" type="video/mp4" />
         </video>
         <div className="video-overlay"></div>
 
@@ -35,12 +38,13 @@ function Home() {
       <Engineer />
       <ScrollTimeline />
       <Vision
-        src="wp-content/uploads/2026/01/about-landing.mp4"
+        src="/wp-content/uploads/about-landing.mp4"
         autoPlay
         loop
         muted
         playsInline
-        className="bgvideo"
+        loading="lazy"
+        className="bgvideo bgvideo1"
       />
       <Impact />
       <Built
@@ -57,7 +61,7 @@ function Home() {
       <Customers
         role="Trusted by 25,000+"
         name="happy customers"
-        img="wp-content/uploads/2026/01/Testimonials-pics.webp"
+        img={Simg}
       />
       <Build />
     </>

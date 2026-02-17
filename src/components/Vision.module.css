@@ -1,14 +1,21 @@
 .cards{
     margin-top: 80px;
     justify-content: center;
-    display: flex;
-    gap: 30px;
+}
+.visionInner{
+    max-width: 1440px;
+    padding: 0 54px;
 }
 @media screen and (max-width:768px) {
-    .cards{
+    .visionInner {
         width: 100%;
-        padding: 60px 24px !important;
-        margin-top: 40px;
-        flex-direction: column;
+        max-width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .cards{
+        margin-top: 0;
+        width: 100%;
     }
 }

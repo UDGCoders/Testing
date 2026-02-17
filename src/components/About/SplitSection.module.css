@@ -1,0 +1,52 @@
+.media {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+.video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    background: #000;
+}
+.image:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+.splitSection{
+    margin-top: 80px;
+}
+.customList {
+
+  padding: 0;
+  padding-left: 20px;
+}
+
+.listItem {
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.listItem::before {
+  color: white;
+  position: absolute;
+}
+@media screen and (max-width:768px) {
+    .splitSection{
+        margin-top: 40px;
+    }
+    .image{
+        height: auto;
+        width: 100%;
+    }
+    .video{
+        aspect-ratio: 4 / 3;
+    }
+    .image:hover{
+        transform: none;
+        transition: none;
+    }
+}

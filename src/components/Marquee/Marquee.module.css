@@ -1,0 +1,19 @@
+.marquee {
+  padding: 40px 0 0 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.text {
+  display: inline-block;
+  transform: translateX(100%);
+  animation: scroll linear infinite;
+  font-size: clamp(1.5rem, 2.5vw, 90px);
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-70%);
+  }
+}

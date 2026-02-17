@@ -1,0 +1,82 @@
+.card {
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 18px;
+  background:
+    radial-gradient(120% 120% at 0% 0%, var(--radial-color), rgba(255, 255, 255, 0) 60%),
+    var(--card-background, rgba(255, 255, 255, 0.217));
+  display: grid;
+  gap: 16px;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  color: inherit;
+}
+
+.body {
+  display: grid;
+  gap: 8px;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(20px, 2.6vw, 30px);
+  font-weight: 600;
+}
+
+.text {
+  margin: 0;
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.details {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    grid-template-rows 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 280ms ease,
+    transform 320ms ease;
+  text-align: left;
+}
+
+.expanded .details {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.detailsInner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.detailsContent {
+  display: grid;
+  gap: 12px;
+}
+
+.toggleText {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+  transition: opacity 220ms ease;
+}
+
+.card:hover .toggleText {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .details,
+  .toggleText {
+    transition: none;
+  }
+}

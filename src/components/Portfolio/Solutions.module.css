@@ -1,0 +1,25 @@
+.solutions {
+  padding: clamp(32px, 6vw, 72px) 0;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.textWrap {
+  max-width: 820px;
+  margin: 12px auto 0;
+}
+
+@media (max-width: 768px) {
+  .titleRow {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

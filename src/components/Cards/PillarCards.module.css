@@ -1,0 +1,18 @@
+.pillarCard{
+    padding: 40px 50px;
+}
+.pillarHeading{
+    font-family: 'Inter';
+    font-size: clamp(28px,4vw,36px);
+    font-weight: 400;
+}
+.pillarDescription{
+    font-family: 'Inter';
+
+    color: #C4D5DC;
+}
+@media screen and (max-width:768px) {
+    .pillarCard{
+        padding: 20px 20px;
+    }
+}

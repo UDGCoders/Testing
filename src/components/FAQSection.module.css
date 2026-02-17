@@ -1,0 +1,160 @@
+/* =========================
+   FAQ Wrapper
+========================= */
+.faqWrapper {
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   FAQ Container
+========================= */
+.faqContainer {
+  padding: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.faqContainer:hover {
+  background-color: #15181e;
+}
+
+/* =========================
+   Question & Icon
+========================= */
+
+.faqQuestion {
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.3em;
+  margin: 0;
+  color: #d7d7d875;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.faqIcon {
+  font-size: 36px;
+  font-weight: 600;
+  color: #d7d7d875;
+}
+
+/* Hover text color */
+.faqContainer:hover .faqIcon,
+.faqContainer:hover .faqQuestion {
+  color: #ffffff;
+}
+
+/* =========================
+   Answer Expansion
+========================= */
+.faqAnswer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  color: #ffffff;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  will-change: max-height, opacity;
+}
+
+.faqAnswer p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.faqContainer:hover .faqAnswer {
+  max-height: 150px;
+  opacity: 1;
+}
+
+/* =========================
+   Arrow Icon
+========================= */
+.arrowIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  padding: 0;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  will-change: transform;
+}
+
+.faqContainer:hover .arrowIcon {
+  transform: rotate(90deg);
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* =========================
+   Line Animation
+========================= */
+.lineTrack {
+  width: 100%;
+  height: 2px;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.lineFill {
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s ease;
+  will-change: transform;
+}
+
+.faqContainer:hover .lineFill {
+  transform: scaleX(1);
+}
+
+/* =========================
+   Responsive Tweaks
+========================= */
+@media (max-width: 768px) {
+  .faqContainerWrap {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .faqIcon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .textCenterBlock {
+    padding: 0 10px;
+  }
+  .faqContainer {
+    padding: 20px 0;
+    width: 100%;
+  }
+  .faqIcon {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .faqQuestion {
+    font-size: 1rem;
+  }
+}
+
+.faqContainer:focus-within .faqAnswer,
+.faqContainer:focus-within .lineFill,
+.faqContainer:focus-within .arrowIcon {
+  transform: scaleX(1);
+  opacity: 1;
+}

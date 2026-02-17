@@ -2,7 +2,6 @@
     background-color: #18181A;
     width: 590px;
     border-radius: 20px;
-
 }
 .image{
     border-radius: 20px;
@@ -10,24 +9,29 @@
     height: 250px;
 }
 .content{
-    margin-top: 20px;
     padding: 20px;
 }
 .content h2{
-    font-family: 'Inter';
+    font-family: 'Inter',serif;
     font-weight: 600;
     line-height: 1.3em;
     font-size: 40px;
+    font-display: swap;
+    margin: 0;
 }
 .content p{
     font-family: 'Inter';
     font-weight: 400;
     font-size: 16px;
-    margin-top: 20px;
+    margin: 0;
+    font-display: swap;
 }
 @media screen and (max-width:768px) {
     .card{
         width: 100%;
+    }
+    .image{
+        height: 200px;
     }
     .content h2{
         font-size: 30px;

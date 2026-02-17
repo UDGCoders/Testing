@@ -1,0 +1,12 @@
+.cardSection {
+  margin-top: 80px;
+  background: #232427;
+  padding: 80px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .cardSection {
+    margin-top: 40px;
+    padding: 40px 24px;
+  }
+}

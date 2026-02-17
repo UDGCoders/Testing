@@ -1,0 +1,84 @@
+.faqContainer {
+  max-width: 60%;
+  margin: 120px auto 0 auto;
+}
+
+.faqItem {
+  border-bottom: 1px solid #3B4350; /* Darker border for a professional look */
+  padding: 1.5rem 0;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.number {
+  min-width: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 20px; /* Your requested 20px space */
+  color: #888;
+  font-family: 'Inter',serif;
+  font-display: swap;
+}
+
+.content {
+  flex: 1;
+}
+
+.question {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+  font-family: 'Inter',serif;
+  font-display: swap;
+  font-weight: 400;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #aaa;
+  margin-top: 0;
+  font-weight: 400;
+  font-family: 'Inter',serif;
+  font-display: swap;
+  width: 90%;
+}
+
+.iconWrapper {
+  font-size: 24px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+  padding-left: 20px;
+}
+
+/* Hover Logic: Expand and Rotate */
+.faqItem:hover .answer {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.faqItem:hover .iconWrapper {
+  transform: rotate(45deg);
+}
+
+/* Clicked/Active State Logic */
+.isActive .answer {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.isActive .iconWrapper {
+  transform: rotate(45deg);
+}
+@media screen and (max-width: 768px) {
+  .faqContainer {
+   max-width: 100%;
+   padding: 0 24px;
+  }
+  
+}

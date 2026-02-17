@@ -2,16 +2,16 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns */
   grid-template-rows: repeat(2, auto);    /* 2 rows */
-  padding: 40px;
-  max-width: 1200px;
+  padding: 40px 0;
+  max-width: 1440px;
   margin: 0 auto;
+  backdrop-filter: blur(2px);
 }
 
 .gridBox {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  /* transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease; */
   aspect-ratio: 1 / 1;
   border: 1px solid #FFFFFF33;
   display: flex;
@@ -29,16 +29,28 @@
   z-index: 10; /* Ensures it grows on top of others */
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-
+.gridImage{
+  height: 100%;
+  width: 100%;
+}
 .active .gridImage {
     width: 35%;
   height: 35%;
   object-fit: contain;
-  /* You can add a fade-in effect here if you like */
   animation: fadeIn 0.4s ease-in-out;
 }
 
 @keyframes fadeIn {
   from { opacity: 0.5; }
   to { opacity: 1; }
+}
+@media screen and (max-width:768px) {
+  .gridContainer{
+    /* Show only 1 pic at a time in the container */
+    /* grid-template-columns: 1fr;   */
+
+    /* To shwo the 2 pic at atime on the screen */
+    grid-template-columns: repeat(2,1fr);
+    backdrop-filter: blur(2px);
+  }
 }
