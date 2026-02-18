@@ -18,11 +18,12 @@ const PortfolioHero = ({
   secondaryButtonOnClick,
   showScrollButton = true,
   scrollLabel = 'Scroll',
-  scrollOffset = 0.9,
 }) => {
-  const handleScroll = () => {
-    if (typeof window === 'undefined') return
-    window.scrollBy({ top: window.innerHeight * scrollOffset, behavior: 'smooth' })
+  const handleScrollDown = () => {
+    const target = document.getElementById('scroll-down')
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
   }
 
   return (
@@ -35,7 +36,7 @@ const PortfolioHero = ({
                 type="button"
                 className={styles.scrollButton}
                 aria-label={scrollLabel}
-                onClick={handleScroll}
+                onClick={handleScrollDown}
               >
                 <span className={styles.scrollArrow}>&darr;</span>
               </button>

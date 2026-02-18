@@ -9,7 +9,7 @@
 
 .animatedText {
   font-family: 'Italiana';
-  font-size: clamp(60px, 20vw, 170px);
+  font-size: clamp(50px, 10vw, 170px);
   font-weight: normal;
   text-align: center;
   margin: 0;
@@ -19,6 +19,17 @@
 }
 .animatedTextSmall {
   font-size: clamp(36px, 12vw, 120px);
+}
+
+.circleButton {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
 }
 
 .circle {
@@ -33,6 +44,9 @@
   align-items: center;
   backdrop-filter: blur(5px);
   margin-top: -90px;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 10;
 }
 
 .arrow {

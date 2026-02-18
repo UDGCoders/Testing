@@ -17,6 +17,9 @@ const DigitalMarketing = () => {
     const hash = targetId.startsWith("#") ? targetId : `#${targetId}`;
     navigate({ hash });
   };
+  const goToContact = () => {
+    navigate("/contactpage");
+  };
   const listata=["Luxury brand experience for a concierge medical service",
     "SEO-optimized, conversion-led website",
     "Meta + Google Ads funnel with 7x ROI in first 60 days",
@@ -52,13 +55,15 @@ const DigitalMarketing = () => {
           />
         </div>
       </div>
+      <div id="scroll-down">
       <SplitSection bigTitle="NOT JUST CLICKS."
       smallTitle="WE CREATE BRANDS PEOPLE TRUST"
       primaryText="At RMAAC, we turn your business into a brand, and your brand into performance. From real estate to private healthcare, we blend narrative strategy with data-backed execution to build visibility that doesn’t just look good — it drives revenue. Whether you're launching a product or scaling a service, we offer more than impressions — we offer impact"
       btntxt="VIEW OUR WORK"
+      onButtonClick={goToContact}
       src="/wp-content/uploads/Screenshot-2026-01-28-170622.webp"
-      id="digital-marketing-start"
       />
+      </div>
       <SpliteSectionLeft src="/wp-content/uploads/Screenshot-2026-01-28-171837.webp"
       bigTitle="Strategy That Sells."
       smallTitle="Content That Connects. Results That Compound."
@@ -84,6 +89,7 @@ const DigitalMarketing = () => {
         smallTitle="THAT PERFORMS"
         primaryText="IF YOU'RE LOOKING FOR A DIGITAL PARTNER THAT BLENDS SHARP STRATEGY WITH GROUNDED STORYTELLING - YOU'RE IN THE RIGHT PLACE. LET'S TAKE YOUR BUISNESS FROM SEENTO SOUGHT-AFTER"
         btntxt="BOOK A DISCOVERY Call"
+        onButtonClick={goToContact}
       />
       <ScrollCards />
     </>

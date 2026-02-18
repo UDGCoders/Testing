@@ -7,8 +7,8 @@ const Testimonials = () => {
   return (
     <>
       <div className={`container ${styles.Testimonials}`}>
-        <div className="row g-5">
-            <div className="text-center col-12" style={{margin:'0', padding:'0'}}>
+        <div className="row g-md-5 g-3 justify-content-center">
+            <div className="text-center col-11">
                 <BigTitle bigTitle="SEE WHAT OUR BRILLIANT"/>
                 <SmallTitle smallTitle="EX-EMPLOYEES HAVE TO SAY"/>
             </div>

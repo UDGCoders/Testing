@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import BigTitle from '../BigTitle'
 import PrimaryText from '../PrimaryText'
 import styles from './CaseStudyHiddenSection.module.css'

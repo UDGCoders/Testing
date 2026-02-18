@@ -40,6 +40,7 @@ const Automation = () => {
           />
         </div>
       </div>
+      <div id="scroll-down">
       <Solutions
         cards={[
           {
@@ -94,6 +95,7 @@ const Automation = () => {
 
         ]}
       />
+      </div>
       <CaseStudySection />
       <DigitalImpact />
       <Reasons

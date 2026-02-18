@@ -12,9 +12,15 @@
   flex-wrap: wrap;
 }
 
+.titleRow > * {
+  min-width: 0;
+}
+
 .textWrap {
   max-width: 820px;
   margin: 12px auto 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 @media (max-width: 768px) {

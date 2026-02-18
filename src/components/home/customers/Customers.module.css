@@ -8,6 +8,12 @@
     transition: padding 0.3s ease;
 }
 
+.image {
+    width: 250px;
+    min-width: 250px;
+    flex: 0 0 250px;
+}
+
 /* Make sure the text container handles the specific font styles */
 .text {
     display: flex;

@@ -1,5 +1,6 @@
 .card {
   width: 100%;
+  min-width: 0;
   text-align: left;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 18px;
@@ -18,12 +19,15 @@
   display: grid;
   gap: 8px;
   text-align: center;
+  min-width: 0;
 }
 
 .title {
   margin: 0;
   font-size: clamp(20px, 2.6vw, 30px);
   font-weight: 600;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .text {
@@ -31,6 +35,8 @@
   font-size: clamp(14px, 1.8vw, 16px);
   line-height: 1.6;
   opacity: 0.85;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .details {

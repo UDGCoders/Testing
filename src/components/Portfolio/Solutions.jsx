@@ -6,17 +6,28 @@ import styles from './Solutions.module.css'
 import PortfolioCard from './PortfolioCard'
 import PrimaryButton from '../PrimaryButton'
 
-const Solutions = ({ cards = [] }) => {
+const hasText = (value) =>
+  typeof value === 'string' ? value.trim().length > 0 : Boolean(value)
+
+const Solutions = ({
+  bigTitle = 'The Digital Solutions',
+  smallTitle = 'We Deliver',
+  primaryText =
+    'From fortified security to intelligent automation, these are the tools, systems, and strategies we put in place to help businesses run safer, faster, and smarter.',
+  cards = [],
+}) => {
   return (
     <>
       <div className={`container ${styles.solutions}`}>
         <div className={styles.titleRow}>
-          <BigTitle bigTitle="The Digital Solutions" />
-          <SmallTitle smallTitle="We Deliver" />
+          {hasText(bigTitle) && <BigTitle bigTitle={bigTitle} />}
+          {hasText(smallTitle) && <SmallTitle smallTitle={smallTitle} />}
         </div>
-        <div className={styles.textWrap}>
-          <PrimaryText primaryText=" From fortified security to intelligent automation, these are the tools, systems, and strategies we put in place to help businesses run safer, faster, and smarter." />
-        </div>
+        {hasText(primaryText) && (
+          <div className={styles.textWrap}>
+            <PrimaryText primaryText={primaryText} />
+          </div>
+        )}
         <div className="row row-cols-1 row-cols-md-3 g-4 mt-3">
           {cards.map((card, index) => (
             <div className="col d-flex" key={card?.id || card?.title || index}>

@@ -21,7 +21,12 @@ const SplitSection = (props,ref) => {
                 <div className="mt-3">
                 {props.primaryText && <PrimaryText primaryText={props.primaryText}/>}
                 </div>
-                {hasButtonText && <PrimaryButton btntxt={props.btntxt}/>}
+                {hasButtonText && (
+                  <PrimaryButton
+                    btntxt={props.btntxt}
+                    onClick={props.onButtonClick}
+                  />
+                )}
                 {props.listData && props.listData.length > 0 && (
               <div className="mt-3">
                 {/* Optional: Render a heading if it exists */}

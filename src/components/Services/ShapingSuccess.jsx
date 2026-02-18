@@ -7,9 +7,9 @@ import SmallTitle from "../SmallTitle";
 const ShapingSuccess = () => {
   return (
     <>
-      <div className="container my-5">
+      <div className="container mt-5">
         <div className="row justify-content-center">
-          <div className="col-lg-8 text-center mb-5">
+          <div className="col-12 col-lg-8 text-center mb-md-5 mb-3">
             <div className="text-center d-flex justify-content-center gap-3">
             <BigTitle bigTitle="SHAPE YOUR" />
             <SmallTitle smallTitle="Future" />
@@ -19,9 +19,9 @@ const ShapingSuccess = () => {
             </div>
           </div>
         </div>
-        <div className="bg-black text-white p-5 rounded-4">
-          <div className="row g-4">
-            <div className="col-md-4">
+        <div className="bg-black text-white p-md-5 p-3 rounded-4">
+          <div className="row g-md-4 g-1">
+            <div className=" col-12 col-md-4">
               <PillarCards
                 pillarHeading=".Excellence"
                 pillarDescription="We strive to exceed expectations by combining expertise, innovation, and attention"

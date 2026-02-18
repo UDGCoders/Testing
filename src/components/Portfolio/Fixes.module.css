@@ -4,6 +4,13 @@
   background-color: #000;
 }
 
+.titleGroup {
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 6px;
+}
+
 @media (max-width: 768px) {
   .fixesSection {
     margin-top: 40px;

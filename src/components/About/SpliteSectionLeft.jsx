@@ -91,7 +91,12 @@ const SpliteSectionLeft = (props) => {
                 </div>
               )}
             </div>
-              {hasButtonText && <PrimaryButton btntxt={props.btntxt} />}
+              {hasButtonText && (
+                <PrimaryButton
+                  btntxt={props.btntxt}
+                  onClick={props.onButtonClick}
+                />
+              )}
             {/*
              * it will show list heading
              * List style default dots

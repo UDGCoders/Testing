@@ -8,7 +8,7 @@ const Fixes = ({ bigTitle1, smallTitle, bigTitle2 }) => {
         <>
         
             <div className={`text-center container ${styles.fixesSection}`}>
-                <div className="d-flex justify-content-center">
+                <div className={`d-flex justify-content-center ${styles.titleGroup}`}>
                     <BigTitle bigTitle={bigTitle1} />
                     <SmallTitle smallTitle={smallTitle} />
                 </div>

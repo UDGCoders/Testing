@@ -1,101 +1,81 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import styles from './Hero.module.css'
 
-const Hero = ({ animatedTexts, scrollTargetId, onScrollTarget }) => {
+const Hero = ({ animatedTexts }) => {
+  const texts =
+    Array.isArray(animatedTexts) && animatedTexts.length > 0
+      ? animatedTexts
+      : ['']
+
   const [index, setIndex] = useState(0)
-  const textsRef = useRef([])
+  const [cycle, setCycle] = useState(0)
 
   useEffect(() => {
-    textsRef.current = Array.isArray(animatedTexts) ? animatedTexts : []
-    if (textsRef.current.length === 0) {
-      setIndex(0)
-    }
+    setIndex(0)
+    setCycle(0)
   }, [animatedTexts])
 
   useEffect(() => {
-    if (!textsRef.current || textsRef.current.length === 0) return
-
     const interval = setInterval(() => {
-      setIndex((prev) => {
-        const len = textsRef.current.length
-        if (len === 0) return 0
-        return (prev + 1) % len
-      })
+      setIndex((prev) => (texts.length > 1 ? (prev + 1) % texts.length : 0))
+      // Keep remounting text so animation repeats forever, even with 1 item.
+      setCycle((prev) => prev + 1)
     }, 5000)
 
     return () => clearInterval(interval)
-  }, [animatedTexts?.length])
+  }, [texts.length])
 
-  const targetId =
-    typeof scrollTargetId === 'string' ? scrollTargetId.trim() : ''
-  const handleScroll = (e) => {
-    if (!targetId) return
-    e.preventDefault()
-    if (typeof onScrollTarget === 'function') {
-      onScrollTarget(targetId)
+  const handleScrollDown = () => {
+    const target = document.getElementById('scroll-down')
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
-    const scrollToTarget = () => {
-      const target = document.getElementById(targetId)
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
-    }
-    scrollToTarget()
-    requestAnimationFrame(scrollToTarget)
   }
 
   return (
     <div className={styles.container}>
       <AnimatePresence mode="wait">
         <motion.div
-          key={animatedTexts?.[index]}
+          key={`${index}-${cycle}`}
           initial={{ opacity: 0, y: 200 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 10 }}
-          transition={{ duration: 1 }}
+          exit={{ opacity: 0, y: 150 }}
+          transition={{ duration: 0.8 }}
           className={[
             styles.animatedText,
-            animatedTexts?.[index] && animatedTexts[index].length > 14
+            texts[index] && texts[index].length > 14
               ? styles.animatedTextSmall
               : ''
-          ].join(' ').trim()}
+          ]
+            .join(' ')
+            .trim()}
         >
-          {animatedTexts?.[index]}
+          {texts[index]}
         </motion.div>
       </AnimatePresence>
-
-      {/* Animated Circle */}
       <button
         type="button"
-        onClick={handleScroll}
-        aria-label="Scroll to next section"
-        style={{
-          background: 'transparent',
-          border: 'none',
-          padding: 0,
-          textDecoration: 'none',
-          color: 'white',
-          cursor: 'pointer'
-        }}
+        className={styles.circleButton}
+        onClick={handleScrollDown}
+        aria-label="Scroll down"
       >
-      <motion.div className={styles.circle}>
-        <motion.div
-          animate={{
-            y: [-40, 0, 0, 40],
-            opacity: [0, 1, 1, 0],
-          }}
-          transition={{
-            duration: 2,
-            times: [0, 0.2, 0.7, 1],
-            repeat: Infinity,
-          }}
-          className={styles.arrow}
-        >
-          ↓
-          
-        </motion.div>
-      </motion.div>
+        <div className={styles.circle} aria-hidden="true">
+          <motion.div
+            animate={{
+              y: [-40, 0, 0, 40],
+              opacity: [0, 1, 1, 0]
+            }}
+            transition={{
+              duration: 2,
+              times: [0, 0.2, 0.7, 1],
+              repeat: Infinity
+            }}
+            className={styles.arrow}
+          >
+            &darr;
+          </motion.div>
+        </div>
       </button>
     </div>
   )

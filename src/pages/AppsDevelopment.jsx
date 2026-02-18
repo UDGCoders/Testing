@@ -70,7 +70,7 @@ const AppsDevelopment = () => {
                 primaryText="We don’t do half-builds or MVPs that sit idle. At RMAAC, we take on entire product lifecycles: research, UI/UX, development, deployment, monetization, and growth. Our team doesn’t just write clean code — we write growth stories."
                 btntxt="LET'S BUILD AN APP TOGETHER"
                 src="/wp-content/uploads/Frame-2608290.webp"
-                id="digital-marketing-start"
+                id="scroll-down"
             />
             <SpliteSectionLeft src="/wp-content/uploads/Frame-2608297.webp"
                 listheading="What we do best:"

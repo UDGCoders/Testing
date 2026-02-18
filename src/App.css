@@ -33,7 +33,7 @@
   min-height: 100vh;
   overflow: hidden;
   margin-top: -12vh;
-  z-index: -2;
+  z-index: 0;
 }
 
 .background-video {

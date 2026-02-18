@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useNavigate } from "react-router-dom";
 import Hero from '../components/Hero'
 import useScrollTarget from '../hooks/useScrollTarget';
 import ContactCard from '../components/Contact/ContactCard';
@@ -9,12 +8,8 @@ const Contact = () => {
     const texts = ["GET IN TOUCH"];
   const [showMap, setShowMap] = useState(false);
   useScrollTarget();
-  const navigate = useNavigate();
-  const handleHeroScroll = (targetId) => {
-    if (!targetId) return;
-    const hash = targetId.startsWith("#") ? targetId : `#${targetId}`;
-    navigate({ hash });
-  };
+  
+  
   const handleLocationClick = () => {
     setShowMap(true);
     const target = document.getElementById('contact-map');
@@ -49,12 +44,10 @@ const Contact = () => {
           */}
           <Hero
             animatedTexts={texts}
-            scrollTargetId="contact-start"
-            onScrollTarget={handleHeroScroll}
           />
         </div>
       </div>
-            <div id="contact-start">
+            <div id="scroll-down">
               <ContactCard onLocationClick={handleLocationClick} />
             </div>
             {showMap && (

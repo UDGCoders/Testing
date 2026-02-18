@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import styles from './FAQ.module.css'; // Import the module
-import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from './FAQ.module.css'; 
 import BigTitle from './BigTitle';
 import SmallTitle from './SmallTitle';
 

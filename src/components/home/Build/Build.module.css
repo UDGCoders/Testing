@@ -33,4 +33,7 @@
     .h2{
         font-size: 28px;
     }
+    .description{
+        width: 100%;
+    }
 }

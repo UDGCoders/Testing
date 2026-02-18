@@ -22,6 +22,7 @@ import NotFound from './pages/NotFound';
 import Error502 from './pages/Error502';
 import OurApproach from './pages/OurApproach';
 import DigitalSuccess from './pages/DigitalSuccess';
+import MobileSolution from './pages/MobileSolution';
 const PageTitle = ({ title, children }) => {
   useEffect(() => {
     document.title = title;
@@ -49,6 +50,7 @@ function App() {
         <Route path="/realestateportfoliopage" element={<PageTitle title="RMAAC"><Real /></PageTitle>} />
         <Route path="/ourapproachpage" element={<PageTitle title="RMAAC"><OurApproach /></PageTitle>} />
         <Route path="/digitalsuccesspage" element={<PageTitle title="RMAAC"><DigitalSuccess/></PageTitle>} />
+        <Route path="/mobilesolutionpage" element={<PageTitle title="RMAAC"><MobileSolution /></PageTitle>} />
         <Route path="/502" element={<PageTitle title="502 - RMAAC"><Error502 /></PageTitle>} />
         <Route path="*" element={<PageTitle title="404 - RMAAC"><NotFound /></PageTitle>} />
       </Routes>

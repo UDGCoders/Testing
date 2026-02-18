@@ -15,12 +15,12 @@ const CenteredTexts = (props) => {
           <SmallTitle smallTitle={props.smallTitle} />
           {/* </div> */}
           <div className={styles.textWidth}>
-            <div className="mt-3 w-75">
+            <div className="mt-3">
               <PrimaryText primaryText={props.primaryText} />
             </div>
           </div>
 
-          <PrimaryButton btntxt={props.btntxt} />
+          <PrimaryButton btntxt={props.btntxt} onClick={props.onButtonClick} />
 
         </div>
       </div>

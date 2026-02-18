@@ -172,6 +172,7 @@ function Navbar() {
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
+                    
                     <li>
                       <Link
                         className="dropdown-item"
@@ -184,7 +185,18 @@ function Navbar() {
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
-                    
+                     <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/digitalsuccesspage"
+                        onClick={closeMobileMenu}
+                      >
+                        Mobile Solutions
+                      </Link>
+                    </li>
+                    <li>
+                      <hr className="dropdown-divider" />
+                    </li>
                     
                     <li>
                       <Link

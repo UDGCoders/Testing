@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import Hero from '../components/Hero';
 import useScrollTarget from '../hooks/useScrollTarget'
 import SplitSection from '../components/About/SplitSection';
@@ -11,12 +10,6 @@ import Testimonials from '../components/About/Testimonials';
 import Marquee from '../components/Marquee/Marquee';
 const About = () => {
   useScrollTarget()
-  const navigate = useNavigate()
-  const handleHeroScroll = (targetId) => {
-    if (!targetId) return
-    const hash = targetId.startsWith('#') ? targetId : `#${targetId}`
-    navigate({ hash })
-  }
 
   const texts = ["About Rmaac"];
   const items = [
@@ -81,15 +74,14 @@ const About = () => {
         <div className="header-content">
           <Hero
             animatedTexts={texts}
-            scrollTargetId="scrollsection"
-            onScrollTarget={handleHeroScroll}
           />
         </div>
       </div>
+      <div id="scroll-down">
       <SplitSection bigTitle="A DIVERSIFIED" 
       smallTitle="GROUP OF COMPANIES" 
       primaryText="We are a diversified group specializing in construction, investment, planning, digital marketing, and IT services. Our expertise drives business growth, resource optimization, and expanding partnerships across industries." src="wp-content/uploads/aboutPic.webp" 
-      id="scrollsection"/>
+      /></div>
       <SpliteSectionLeft bigTitle="ABOUT" 
       smallTitle="Us" 
       title2="From Foundation to Future - A Legacy of Vision" 

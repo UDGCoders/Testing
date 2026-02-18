@@ -70,7 +70,7 @@ const OurApproach = () => {
           <div className="row align-items-md-center">
             <div className="col-md-6">
               <img
-                src="/wp-content/uploads/Group-1000008068.webp"
+                src="/wp-content/uploads/philosophy.webp"
                 alt="Our Investment Philosophy"
                 className={`img-fluid ${styles.investmentImage}`}
                 loading="lazy"
@@ -105,7 +105,7 @@ const OurApproach = () => {
       <SpliteSectionLeft
         bigTitle="Built"
         primaryText="We incubate products that solve clearly defined problems with commercial viability. These are internally led ventures where we control the end-to-end lifecycle from market research to product development, brand creation, and monetization."
-        src="/wp-content/uploads/real-estate-image.webp"
+        src="/wp-content/uploads/shiptquick-container-1.webp"
         alt="Built model"
         disableGrayscale
         listHeading="Scope Includes:"
@@ -121,7 +121,7 @@ const OurApproach = () => {
       <SplitSection
         bigTitle="Partner"
         primaryText="We enter select equity or revenue-share partnerships with external ventures where our operational involvement significantly improves business outcomes. This is ideal for early-to-mid-stage companies requiring execution capacity in product, tech, branding, or marketing."
-        src="/wp-content/uploads/Group-1000008069.webp"
+        src="/wp-content/uploads/premier-1.webp"
         alt="Partner model"
         listHeading="Scope Includes:"
         listData={[
@@ -136,7 +136,7 @@ const OurApproach = () => {
       <SpliteSectionLeft
         bigTitle="Scale"
         primaryText="For post-revenue businesses positioned for growth, we provide execution support in infrastructure, paid marketing, analytics, and platform development. Our scale model aligns with companies ready to expand market reach, standardize delivery, or prepare for external funding."
-        src="/wp-content/uploads/Group-1000008068.webp"
+        src="/wp-content/uploads/ai-3.webp"
         alt="Scale model"
         disableGrayscale
         listHeading="Scope Includes:"
@@ -152,7 +152,7 @@ const OurApproach = () => {
       <SplitSection
         bigTitle="What We Look For"
         primaryText="We assess both product potential and partnership viability. Our ideal engagements include:"
-        src="/wp-content/uploads/Group-1000008069.webp"
+        src="/wp-content/uploads/shiptquick-container-1.webp"
         alt="What we look for"
         listData={[
           'A clearly defined customer pain point and addressable market',

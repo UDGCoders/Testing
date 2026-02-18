@@ -63,101 +63,99 @@ const Real = () => {
         <div className="header-content">
           <PortfolioHero
             bigTitle="Meet the PROOF"
-            smallTitle="That Free Up Your Smartest People"
-            primaryText="We’ve helped real estate and construction brands go from blueprint to breakthrough — building everything from ground-up digital systems that keep projects moving, to marketing that gets buyers lining up before the foundation is set."
+            smallTitle="OF OUR DIGITAL IMPACT"
+            primaryText="We’ve helped real estate and construction brands go from blueprint to breakthrough — building everything from ground-up digital systems that keep projects moving, to marketing that gets buyers lining up before the foundation is set"
             primaryButtonText="VIEW OUR PROJECTS"
-            secondaryButtonText=""
+            secondaryButtonText="START YOU SUCCESS STORY"
           />
         </div>
       </div>
+      <div id="scroll-down">
       <Solutions
+        bigTitle="THE DIGITAL RECIPE"
+        smallTitle="WE WORK ON"
+        primaryText=""
         cards={[
           {
             id: 1,
             imageSrc: "/wp-content/uploads/Group-1000008068-1.webp",
             imageAlt: "Web Development & Revamps",
-            title: "Web Development & Revamps",
-            text: "High-performance websites that are secure, responsive, and built to convertÂ from brochure sites to complex platforms."
+            title: "Construction Tech Setup",
+            text: "From project management software to site monitoring tools, we put the tech in place"
           },
           {
             id: 2,
             imageSrc: "/wp-content/uploads/Group-1000008032.webp",
             imageAlt: "Web Development & Revamps",
-            title: "AI Integrations",
-            text: "Embed intelligence into your operations Â from predictive analytics to automated decision-making.Â "
+            title: "Branding & Positioning",
+            text: "We craft an identity buyers remember from logo and colour palette to a story that sells"
           },
           {
             id: 3,
             imageSrc: "/wp-content/uploads/Group-1000008031.webp",
             imageAlt: "Web Development & Revamps",
-            title: "Custom ChatbotsÂ ",
-            text: "Conversational AI assistants that handle customer queries, book appointments, and collect leads 24/7.Â "
+            title: "Website & Property Portals",
+            text: "High-converting sites that showcase listings, capture leads, and keep deals moving"
           },
           {
             id: 4,
             imageSrc: "/wp-content/uploads/Group-1000008030.webp",
             imageAlt: "Web Development & Revamps",
-            title: "Business Dashboards",
-            text: "Centralised dashboards that pull in live data from across your systems, so decision-making happens in real time."
+            title: "AI & Automation",
+            text: "Integrations that handle client follow-ups, project tracking, and data insights"
           },
           {
             id: 5,
             imageSrc: "/wp-content/uploads/Group-1000008029.webp",
             imageAlt: "Web Development & Revamps",
-            title: "CRM Solutions",
-            text: "Tailored CRMs that track leads, manage clients, and automate follow-ups â€” all in one secure hub."
+            title: "Marketing Campaigns",
+            text: "From pre-launch buzz to sold-out openings, our campaigns drive the right buyers"
           },
           {
             id: 6,
             imageSrc: "/wp-content/uploads/Mask-group-1.webp",
             imageAlt: "Web Development & Revamps",
-            title: "Endpoint SecurityÂ ",
-            text: "Advanced device protection that stops malware, ransomware, and phishing before they impact your business."
+            title: "SEO & Local Visibility",
+            text: "We make sure you’re found by investors and partners exactly when they’re searching."
           },
 
         ]}
       />
+      </div>
       <CaseStudySection
-        bigTitle="Real Estate Case Studies"
-        smallTitle="From Plan to Profit"
-        primaryText="A closer look at how we combine positioning, digital execution, and automation to help projects launch faster and convert better."
+        bigTitle="SEE OUR "
+        smallTitle="BOLDEST BUILDS"
+        primaryText=""
         cards={realEstateCaseStudies}
       />
       <DigitalImpact />
       <Reasons
         bigTitle="That’s just the tip of the"
-        smallTitle="Iceberg"
+        smallTitle=" Blueprint"
         inline
         cardColClass="col-md-5"
         variant="automation"
         cards={[
           {
 
-            title: "IT & Cybersecurity",
-            text: "We incubate and create new ventures with real-world relevance",
-            list: ["24/7 endpoint protection", "AI-powered threat detection", "Dark web monitoring", "Advanced email security", "Compliance-ready backups"],
+            title: "Property Development",
+            list: ["Full-scale project planning to tech integration", "Website & portal builds for developments", "SEO-ready property listings", "Fast-loading, mobile-tested designs", "3D virtual tours & interactive floorplans"],
 
           },
           {
 
-            title: "Automations",
-            text: "We invest with aligned teams and strategic collaborators",
-            list:["AI-driven CRM workflows","Automated onboarding sequences ","Smart reporting dashboards ","License & tool usage audits ","Predictive maintenance alerts "],
+            title: "Marketing & Lead Generation",
+            list:["Google Ads funnels for pre-sales","Retargeting to re-engage potential buyers","Market-specific keyword targeting","Conversion-optimised creatives","ROI tracking for every campaign"],
           },
           {
 
-            title: "Cloud & Infrastructure ",
-            list:["Microsoft 365 setup & optimization","Secure cloud migrations ","Network monitoring & patching ","Disaster recovery solutions ","Hardware-as-a-service "],
-          },
-          {
-
-            title: "Campaigns & Outreach ",
-            list:["Industry-specific lead funnels ","Automated email sequences ","Conversion-focused landing pages ","Multi-channel remarketing ","ROI tracking & reporting "],
+            title: "AI & Smart Tech",
+            list:["AI-driven CRM workflows for agents","Automated follow-ups with prospects","Predictive analytics for property trends","Chatbots for 24/7 lead capture","Smart reporting dashboards"],
           },
         ]}
       />
-      <Fixes bigTitle2="£7K Back in Your Pocket." bigTitle1="68%" smallTitle="Faster Fixes."/>
-      <CenteredTexts bigTitle="Ready to Turn Your IT into a Growth Story?" primaryText="Let’s ditch the endless “IT headaches” and build you a setup that actually fuels your business with airtight security, smart automations, and measurable wins." btntxt="Let’s Get Started"/>
+      <Fixes bigTitle2="MARKETING TURNAROUNDS" bigTitle1="SELL PROPERTIES FASTER WITH 3X" smallTitle="MORE QUALIFIED LEADS AND 55% QUICKER"/>
+      <CenteredTexts bigTitle="Ready to Turn Your IT into a Success  Story?" primaryText="Let’s turn your vision into a digital powerhouse that drives measurable results." btntxt="STAR MY TRANSFORMATION"/>
     </>
   )
 }

@@ -17,6 +17,9 @@ const   ItSolutions = () => {
        const hash = targetId.startsWith('#') ? targetId : `#${targetId}`
        navigate({ hash })
      }
+     const goToContact = () => {
+       navigate('/contactpage')
+     }
      const features = [
     "Custom Web & Mobile Development",
     "AI Integration & Machine Learning",
@@ -59,12 +62,16 @@ const   ItSolutions = () => {
           />
         </div>
     </div>
-    <SplitSection bigTitle="ENTERPRISE TECH WITH" 
+    <div id="scroll-down">
+          <SplitSection bigTitle="ENTERPRISE TECH WITH" 
     smallTitle="A BUILDER'S MINDSET" 
     primaryText="At RMAAC IT Solutions, we design and engineer the digital layer behind modern businesses. Whether you're building an Al product, setting up a secure remote infrastructure, or launching a web platform that's SEO-ready from day one — we're your full-stack technology partner." 
     btntxt="Let’s talk about what you’re building"
+    onButtonClick={goToContact}
     src="/wp-content/uploads/image-1-1.webp"
-    id="it-solutions-start"/>
+    />
+    </div>
+
     <SpliteSectionLeft bigTitle="Full Service Tech."
     smallTitle="Grounded in Execution"
     primaryText="Unlike typical IT firms, we don’t just deliver “solutions” — we deliver operational impact. Every project we take on is designed around real constraints, real timelines, and measurable outcomes."
@@ -88,7 +95,8 @@ const   ItSolutions = () => {
     <CenteredTexts bigTitle="LET'S BUILD THE INFRASTRUCTURE"
     smallTitle="BEHIND YOUR NEXT MOVE"
     primaryText="Whether you're launching a tech-driven product or upgrading the digital core of your operations, RMAAC brings end-to-end execution. We think in roadmaps, data points, and real-world delivery."
-    btntxt="START YOUR DISCOVERY Call"/>
+    btntxt="START YOUR DISCOVERY Call"
+    onButtonClick={goToContact}/>
      <ScrollCards/>
     </>
   )
