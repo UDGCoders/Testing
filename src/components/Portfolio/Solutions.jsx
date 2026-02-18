@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import BigTitle from '../BigTitle'
 import SmallTitle from '../SmallTitle'
 import PrimaryText from '../PrimaryText'
@@ -15,7 +16,14 @@ const Solutions = ({
   primaryText =
     'From fortified security to intelligent automation, these are the tools, systems, and strategies we put in place to help businesses run safer, faster, and smarter.',
   cards = [],
+  btntxt,
 }) => {
+  const navigate = useNavigate()
+
+  const handleButtonClick = () => {
+    navigate('/servicespage')
+  }
+
   return (
     <>
       <div className={`container ${styles.solutions}`}>
@@ -41,10 +49,12 @@ const Solutions = ({
           ))}
         </div>
       </div>
-      <div className="d-flex justify-content-center align-items-center">
-          <div className="content">
-            <PrimaryButton btntxt="Explore Our Automation Solutions"/>
+      <div className="container d-flex justify-content-center align-items-center">
+        {hasText(btntxt) && (
+          <div className="content mt-3">
+            <PrimaryButton btntxt={btntxt} onClick={handleButtonClick} />
           </div>
+        )}
       </div>
     </>
   )

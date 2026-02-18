@@ -7,6 +7,13 @@ import Reasons from '../components/Reasons';
 import Fixes from '../components/Portfolio/Fixes'
 import CenteredTexts from '../components/Services/CenteredTexts';
 const Real = () => {
+  const digitalImpactRecords = [
+    { id: 'units-sold', targetNumber: 40, title: 'Property & development websites launched', prefix: '+' },
+    { id: 'projects-delivered', targetNumber: 70, title: 'Construction project tech setups delivered', prefix: '+' },
+    { id: 'lead-conversion', targetNumber: 800, title: 'In property sales driven through our marketing campaigns', prefix: 'K+' },
+    { id: 'qualified-investors', targetNumber: 40, title: 'Developers, agents & firms we’ve partnered with', prefix: '+' },
+  ]
+
   const realEstateCaseStudies = [
     {
       id: 'enclave-launch',
@@ -72,6 +79,7 @@ const Real = () => {
       </div>
       <div id="scroll-down">
       <Solutions
+        btntxt="Explore Our Real Estate Services"
         bigTitle="THE DIGITAL RECIPE"
         smallTitle="WE WORK ON"
         primaryText=""
@@ -128,7 +136,10 @@ const Real = () => {
         primaryText=""
         cards={realEstateCaseStudies}
       />
-      <DigitalImpact />
+      <DigitalImpact
+        bigTitle="Our Real Estate Impact"
+        records={digitalImpactRecords}
+      />
       <Reasons
         bigTitle="That’s just the tip of the"
         smallTitle=" Blueprint"

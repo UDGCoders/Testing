@@ -188,7 +188,7 @@ function Navbar() {
                      <li>
                       <Link
                         className="dropdown-item"
-                        to="/digitalsuccesspage"
+                        to="/mobilesolutionpage"
                         onClick={closeMobileMenu}
                       >
                         Mobile Solutions

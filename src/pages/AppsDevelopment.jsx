@@ -78,6 +78,7 @@ const AppsDevelopment = () => {
                 smallTitle="Product Development"
                 primaryText="From idea to installs to income — we do it all under one roof. Most dev shops stop at handoff. We don’t. With RMAAC, every app we launch is supported by real monetization plans, performance tracking, and infrastructure designed to scale."
                 listData={listdata}
+                reverseOnMobile={false}
             />
             <SplitSection bigTitle="Spotlight Product"
       smallTitle="Photo Enhancer"

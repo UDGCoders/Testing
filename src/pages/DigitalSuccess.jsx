@@ -12,6 +12,15 @@ import CenteredTexts from '../components/Services/CenteredTexts';
 const DigitalSuccess = () => {
 
   useScrollTarget();
+  const digitalImpactRecords = [
+    { id: 'brands-grown', targetNumber: 500, title: 'Websites', prefix: '+' },
+    { id: 'campaigns-launched', targetNumber: 200, title: 'Paid Campaigns', prefix: '+' },
+    { id: 'qualified-leads', targetNumber: 12, title: 'Adwords Budget Managed', prefix: 'X' },
+    { id: 'seo-growth', targetNumber: 1000, title: 'SEO Campaigns', prefix: '+' },
+    { id: 'markets-served', targetNumber: 100, title: 'Social Media Campaigns', prefix: '+' },
+    { id: 'always-on-automation', targetNumber: 300, title: 'Clients', prefix: '+' },
+  ]
+
   const digitalSolutionsCaseStudies = [
     {
       id: 'premier-private-gp',
@@ -137,6 +146,7 @@ const DigitalSuccess = () => {
       </div>
       <div id="scroll-down">
       <Solutions
+        btntxt="Explore Our MArketing Services"
         cards={[
           {
             id: 1,
@@ -190,7 +200,10 @@ const DigitalSuccess = () => {
         primaryText=""
         cards={digitalSolutionsCaseStudies}
       />
-      <DigitalImpact />
+      <DigitalImpact
+        bigTitle="Our Digital Marketing Impact"
+        records={digitalImpactRecords}
+      />
       <Reasons
         bigTitle="That’s just the tip of the"
         smallTitle="Iceberg"

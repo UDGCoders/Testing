@@ -3,33 +3,34 @@ import BigTitle from '../BigTitle'
 import SmallTitle from '../SmallTitle'
 import styles from './DigitalImpact.module.css'
 import Counter from '../Counter'
-const DigitalImpact = () => {
+
+const hasText = (value) =>
+  typeof value === 'string' ? value.trim().length > 0 : Boolean(value)
+
+const DigitalImpact = ({ bigTitle, smallTitle, records }) => {
+  const impactRecords = Array.isArray(records) ? records : []
+
   return (
     <>
       <div className={`container ${styles.digitalImpact}`}>
         <div className="d-flex justify-content-center">
-          <BigTitle bigTitle="Our Digital Impact" />
-          <SmallTitle smallTitle="" />
+          {hasText(bigTitle) && <BigTitle bigTitle={bigTitle} />}
+          {hasText(smallTitle) && <SmallTitle smallTitle={smallTitle} />}
         </div>
-        <div className="row mt-4 justify-content-center">
-          <div className={`col-md-3 ${styles.counterCard}`}>
-            <Counter targetNumber="150" title=" Businesses Secured" prefix='+' />
-          </div>
-          <div className={`col-md-3 ${styles.counterCard}`}>
-            <Counter targetNumber="300" title="IT & Automation Projects Delivered " prefix='+' />
-          </div>
-          <div className={`col-md-3 ${styles.counterCard}`}>
-            <Counter targetNumber="700" title="Client Tech Costs Saved " prefix='K+' />
-          </div>
-          <div className={`col-md-3 ${styles.counterCard}`}>
-            <Counter targetNumber="500" title="Cybersecurity Incidents Prevented" prefix='+' />
-          </div>
-          <div className={`col-md-3 ${styles.counterCard}`}>
-            <Counter targetNumber="4" title="Industry-Specific AI Products" prefix='' />
-          </div>
-          <div className={`col-md-3 ${styles.counterCard}`}>
-            <Counter targetNumber="24" title="Helpdesk Coverage " prefix='/7' />
-          </div>
+        <div className="row row-cols-1 row-cols-md-3 mt-4 justify-content-center">
+          {impactRecords.map((record, index) => (
+            <div
+              key={record?.id || record?.title || index}
+              className={`col ${styles.counterCard}`}
+            >
+              <Counter
+                targetNumber={record?.targetNumber}
+                title={record?.title}
+                prefix={record?.prefix}
+                duration={record?.duration}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </>

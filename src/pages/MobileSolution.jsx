@@ -12,6 +12,15 @@ import CenteredTexts from '../components/Services/CenteredTexts';
 const MobileSolution = () => {
 
   useScrollTarget();
+  const digitalImpactRecords = [
+    { id: 'app-installs', targetNumber: 150, title: 'App Downloads Across Platforms', prefix: 'K+' },
+    { id: 'countries-reached', targetNumber: 3, title: 'Countries Where Our Apps Rank in Top Charts', prefix: '' },
+    { id: 'core-features-built', targetNumber: 4.5, title: 'Average User Rating', prefix: '★' },
+    { id: 'retention-lift', targetNumber: 8, title: 'Unique App Categories Developed', prefix: '+' },
+    { id: 'release-cycles', targetNumber: 100, title: 'GDPR & CCPA Compliant Apps', prefix: '%' },
+    { id: 'support-coverage', targetNumber: 1, title: 'Monthly Active Users Supported', prefix: 'M+' },
+  ]
+
   const mobileSolutionCards = [
     {
       id: 'clinic-funnel',
@@ -143,6 +152,7 @@ const MobileSolution = () => {
       </div>
       <div id="scroll-down">
       <Solutions
+        btntxt="Explore Our Mobile Solutions"
               bigTitle="WHAT EVERY SUCCESSFUL APP"
         smallTitle="HAS IN ITS DNA"
         primaryText="Apps are built on a rock-solid foundation of security, compliance, and seamless performance. Here’s our “must-have” recipe for every mobile product we create"
@@ -194,7 +204,10 @@ const MobileSolution = () => {
       />
       </div>
       <CaseStudySection  bigTitle="SEE OUR " smallTitle="BOLDEST BUILDS" cards={mobileSolutionCards}/>
-      <DigitalImpact />
+      <DigitalImpact
+        bigTitle="Our Mobile Impact"
+        records={digitalImpactRecords}
+      />
       <Reasons
         bigTitle="That’s just the tip of the"
         smallTitle="Backstory"

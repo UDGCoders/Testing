@@ -1,5 +1,5 @@
 .solutions {
-  padding: clamp(32px, 6vw, 72px) 0;
+  padding: 0 54px;
   text-align: center;
   margin-top: 80px;
 }
@@ -27,5 +27,9 @@
   .titleRow {
     flex-direction: column;
     gap: 6px;
+  }
+  .solutions{
+    margin-top: 40px;
+    padding: 0 24px;
   }
 }

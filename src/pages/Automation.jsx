@@ -12,6 +12,15 @@ import CenteredTexts from '../components/Services/CenteredTexts';
 const Automation = () => {
 
   useScrollTarget();
+  const digitalImpactRecords = [
+    { id: 'businesses-secured', targetNumber: 150, title: 'Businesses Secured', prefix: '+' },
+    { id: 'projects-delivered', targetNumber: 300, title: 'IT & Automation Projects Delivered', prefix: '+' },
+    { id: 'costs-saved', targetNumber: 700, title: 'Client Tech Costs Saved', prefix: 'K+' },
+    { id: 'incidents-prevented', targetNumber: 500, title: 'Cybersecurity Incidents Prevented', prefix: '+' },
+    { id: 'ai-products', targetNumber: 4, title: 'Industry-Specific AI Products', prefix: '' },
+    { id: 'helpdesk-coverage', targetNumber: 24, title: 'Helpdesk Coverage', prefix: '/7' },
+  ]
+
   return (
     <>
       <div className="headerbackground h-100">
@@ -42,6 +51,7 @@ const Automation = () => {
       </div>
       <div id="scroll-down">
       <Solutions
+        btntxt="Explore Our Automation Solutions"
         cards={[
           {
             id: 1,
@@ -97,7 +107,10 @@ const Automation = () => {
       />
       </div>
       <CaseStudySection />
-      <DigitalImpact />
+      <DigitalImpact
+        bigTitle="Our Automation Impact"
+        records={digitalImpactRecords}
+      />
       <Reasons
         bigTitle="That’s just the tip of the"
         smallTitle="Iceberg"

@@ -10,11 +10,14 @@ const SpliteSectionLeft = (props) => {
       ? props.btntxt.trim().length > 0
       : Boolean(props.btntxt);
   const hasMedia = Boolean(props.videoSrc || props.src);
+  const reverseOnMobile =
+    typeof props.reverseOnMobile === "boolean" ? props.reverseOnMobile : false;
+  const mobileOrderClass = reverseOnMobile ? "flex-column-reverse" : "flex-column";
 
   return (
     <>
       <div className={`container ${styles.spliteSectionLeft}`} id={props.id ? props.id : ""}>
-        <div className="row align-items-md-center flex-column-reverse flex-md-row">
+        <div className={`row align-items-md-center ${mobileOrderClass} flex-md-row`}>
           {hasMedia && (
             <div className="col-md-6 justify-content-start d-flex align-items-md-center mt-3 mt-md-0">
               {props.videoSrc ? (

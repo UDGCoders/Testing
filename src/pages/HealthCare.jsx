@@ -10,6 +10,13 @@ import CenteredTexts from '../components/Services/CenteredTexts'
 
 const HealthCare = () => {
   useScrollTarget()
+  const digitalImpactRecords = [
+    { id: 'patients-served', targetNumber: 500, title: 'Patients Reached', prefix: 'K+' },
+    { id: 'healthcare-projects', targetNumber: 200, title: 'Healthcare Platforms Launched', prefix: '+' },
+    { id: 'compliance-ready-systems', targetNumber: 8, title: 'In Healthcare Campaigns Managed', prefix: 'M+' },
+    { id: 'care-workflow-automation', targetNumber: 300, title: 'Healthcare-specific ad campaigns', prefix: '+' },
+    { id: 'countries-covered', targetNumber: 95, title: 'client retention rate', prefix: '%' },
+  ]
 
   const healthCareCaseStudies = [
     {
@@ -110,6 +117,7 @@ const HealthCare = () => {
       </div>
       <div id="scroll-down">
       <Solutions
+        btntxt="Explore Our Healthcare Solutions"
               bigTitle="NO ROOM FOR GUESSWORK"
         smallTitle=" FOR WHAT'S IMPORTANT"
         primaryText="Built for trust, speed, and compliance, every RMMAC solution starts with a foundation you can stake your reputation on"
@@ -166,7 +174,10 @@ const HealthCare = () => {
         cards={healthCareCaseStudies}
       />
 
-      <DigitalImpact />
+      <DigitalImpact
+        bigTitle="RESULTS LOVED AND VALUED"
+        records={digitalImpactRecords}
+      />
 
       <Reasons
         bigTitle="Smarter Healthcare,"

@@ -6,15 +6,18 @@ import styles from './SplitSection.module.css'
 import PrimaryButton from '../PrimaryButton'
 const SplitSection = (props,ref) => {
   const hasMedia = Boolean(props.videoSrc || props.src)
+  const reverseOnMobile =
+    typeof props.reverseOnMobile === 'boolean' ? props.reverseOnMobile : true
   const hasButtonText =
     typeof props.btntxt === 'string'
       ? props.btntxt.trim().length > 0
       : Boolean(props.btntxt)
+  const mobileOrderClass = reverseOnMobile ? 'flex-column-reverse' : 'flex-column'
 
   return (
         <>
         <div className={`container ${styles.splitSection}`} >
-        <div className="row align-items-md-center flex-column-reverse flex-md-row" id={props.id ? props.id : ""}>
+        <div className={`row align-items-md-center ${mobileOrderClass} flex-md-row`} id={props.id ? props.id : ""}>
             <div className={hasMedia ? 'col-md-6' : 'col-12'}>
                 <BigTitle bigTitle={props.bigTitle}/>
                 {props.smallTitle && <SmallTitle smallTitle={props.smallTitle}/>}
