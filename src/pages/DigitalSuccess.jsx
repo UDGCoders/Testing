@@ -1,11 +1,11 @@
 import React from 'react'
-// import { useNavigate } from "react-router-dom";
 
 import useScrollTarget from '../hooks/useScrollTarget';
 import PortfolioHero from '../components/Portfolio/PortfolioHero';
 import Solutions from '../components/Portfolio/Solutions';
 import CaseStudySection from '../components/Portfolio/CaseStudySection';
 import DigitalImpact from '../components/Portfolio/DigitalImpact';
+import CompanyCardsCarousel from '../components/Portfolio/CompanyCardsCarousel'
 import Reasons from '../components/Reasons';
 import Fixes from '../components/Portfolio/Fixes'
 import CenteredTexts from '../components/Services/CenteredTexts';
@@ -25,7 +25,7 @@ const DigitalSuccess = () => {
     {
       id: 'premier-private-gp',
       picture: '/wp-content/uploads/Frame-2608314-3.webp',
-      radialBackground: '#ACB5F1',
+      radialBackground: '',
       bigTitle:
         'Transforming a Vision into a Trusted UK Healthcare Brand Serving Over 1,000 Patients',
       text:
@@ -79,7 +79,7 @@ const DigitalSuccess = () => {
     {
       id: 'shiptquick',
       picture: '/wp-content/uploads/Frame-2608314-1.webp',
-      radialBackground: '#0c2826ab',
+      radialBackground: '',
       bigTitle:
         'How a 3PL Avoided $250K in Downtime and Modernized Its Entire Warehouse IT in 6 Weeks',
       text:
@@ -113,6 +113,187 @@ const DigitalSuccess = () => {
           text: 'Provided lightning-fast hosting, ongoing technical maintenance, and quarterly SEO reviews to ensure ShiptQuick stays competitive',
         },
       ],
+    },
+  ]
+
+  const companySliderCards = [
+    {
+      id: 'premier-private-gp-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008048.webp',
+      imageAlt: 'Premier Private GP',
+      bigTitle: 'From Newcomer to UK Trusted Healthcare Brand Serving 1,000+ Patients..',
+      primaryText:
+        'RMAAC has been part of Premier Private GP’s journey since day one, transforming it from an unknown name into a go-to private clinic in Surrey. This has been achieved through complete brand development, a custom-built website, SEO, targeted ad campaigns, email marketing, print materials, social media, chatbot automation, GHL integration, and a fully functional mobile app, we’ve built a digital and offline presence that works in perfect sync.',
+    },
+    {
+      id: 'shiptquick-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008049.webp',
+      imageAlt: 'DevNest',
+      bigTitle: `How RMAAC's DevNest Turned 7 App Ideas Into 100,000+ Downloads With 4.5-Star Ratings`,
+
+      primaryText:
+        `DevNest, powered by RMAAC's full-stack expertise, specializes in building mobile applications that users genuinely love. Using Flutter, Kotlin, and Jetpack Compose, we've launched successful apps across diverse markets from photo editing and e-commerce tools to Islamic guidance and maritime tracking. Every app is backed by market research, rigorous testing, strategic positioning, and ongoing optimization that keeps users engaged and ratings high.`,
+    },
+    {
+      id: 'simpl-health-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008050.webp',
+      imageAlt: 'assistpro',
+      bigTitle: 'How RMAAC Built AssistPro University: A Complete LMS Platform Serving Executive Assistants.',
+      primaryText:
+       `AssistPro University represents RMAAC's expertise in educational technology and platform development. We delivered end-to-end Wordpress website development with integrated learning management system, structured e-learning modules covering essential VA skills, automated subscription billing, resource libraries with downloadable templates and mobile-responsive design for learning on-the-go.`,
+    },
+    {
+      id: 'backify-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008052.webp',
+      imageAlt: 'Trademark Shark',
+      bigTitle: 'Building Trademark Shark: The Platform That Makes Brand Protection Simple for Entrepreneurs.',
+
+      primaryText:
+        `RMAAC created Trademark Shark's complete digital presence using WordPress development, strategic SEO, and CRM integration. We designed an intuitive platform where business owners can search trademarks, file applications, and manage their brand protection, all without needing a law degree. The result is a thriving service that helps Amazon sellers, startups, and growing businesses navigate trademark registration with confidence and clarity`,
+    },
+    {
+      id: 'magic-ai-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008067.webp',
+      imageAlt: 'Leo’s Construction',
+      bigTitle: `How RMAAC Built Leo's Construction's WordPress Site That Now Generates Quality Leads for a 25-Year Painting Contractor.`,
+  
+      primaryText:
+        `RMAAC developed Leo's Construction's complete WordPress website featuring integrated quote request forms, service-specific landing pages for interior, exterior, commercial and industrial painting, mobile-responsive design for on-site contractors, project gallery showcasing their work quality, and local SEO optimization targeting Tampa Bay area searches. The platform positions their decades of experience and partnerships with local builders, the City of Tampa, and State Department of Health, converting website visitors into residential and commercial painting clients.`
+    },
+    {
+      id: 'ship-finder-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008053.webp',
+      imageAlt: 'Scaling Suite',
+      bigTitle: `How a SaaS Startup Launched a Fully Branded CRM and Secured 5 Industries in Under 8 Weeks`,
+
+      primaryText:
+`ScalingSuite started as an idea for an all-in-one CRM and automation platform, but in just two months, it became a fully launched SaaS brand with paying customers across insurance, legal, real estate, healthcare, and marketing sectors. We handled the full build like brand identity, website, SaaS integrations, Google SSO, industry-specific pages, and social media rollout.`
+    },
+    {
+      id: 'ship-finder-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008066.webp',
+      imageAlt: 'Scaling Suite',
+      bigTitle: `Building Chief Detective's Website: A Premium Platform That Attracts Founders of Multi-Million Dollar DTC Brands.`,
+
+      primaryText:
+`RMAAC developed Chief Detective's complete digital presence with custom website development showcasing their work with MERIT, Avaline, and Versed, strategically designed landing pages addressing specific founder pain points like underperforming paid channels and limited creative bandwidth, integrated CRM system for managing high-ticket client relationships, and UI/UX enhancements that communicate sophistication and strategic depth. Every element positions Chief Detective as the go-to growth partner.`
+    },
+      
+    {
+      id: 'ship-finder-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008054.webp',
+      imageAlt: 'cd',
+      bigTitle: `Building Marc Illy's Digital Empire: The Complete Course Platform That Turned His $130K/Month Blueprint Into a Teachable System.`,
+
+      primaryText:
+`RMAAC developed The Illy Method platform that transformed Marc Illy from agency owner into course creator and educator. Through sophisticated website development, integrated learning management system, strategic course structure breaking down his exact methods into digestible modules, high-converting sales funnel featuring his Forbes TV appearance and real business results, automated student onboarding, and professional branding that reflects his journey working with NHL, Maserati, and Red Bull, we created a digital education brand that attracts serious entrepreneurs ready to replicate his success.`
+    },
+    {
+      id: 'ship-finder-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008055.webp',
+      imageAlt: 'cd',
+      bigTitle: `Building TransCanada.Tech's Digital Platform: Website, E-Commerce Portal, and Social Presence for a Growing IT Services Provider.
+`,
+
+      primaryText:
+`RMAAC developed TransCanada.Tech's complete online presence featuring professional website development with 10+ years of credibility showcased, integrated e-commerce system for hardware procurement and service purchasing, streamlined quote request and client onboarding process, social media management establishing them as Canadian IT authorities, service pages optimized for managed IT, cybersecurity, and fractional CTO searches, and client portal for seamless 24/7 support access. The result is a comprehensive digital infrastructure that positions TransCanada.Tech as the go-to MSP for businesses ready to stop managing IT and start innovating with it.`
+    },
+    {
+      id: 'ship-finder-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008056.webp',
+      imageAlt: 'cd',
+      bigTitle: `Building Scootsee From Concept to Market: Complete Brand Launch for Canadian Smart Mobility Startup.
+`,
+
+      primaryText:
+`RMAAC took Scootsee from idea to launch-ready startup with zero existing assets. We delivered end-to-end brand creation including naming strategy and visual identity, fully responsive Webflow website with rider and partner journeys, scalable CMS allowing their team to update without developers, complete marketing suite with social templates and city partner pitch materials, PR-ready visual kit for media coverage, and conversion-optimized page architecture. In just 5 weeks, Scootsee went from having no brand presence to a professional digital platform ready for pre-beta rollout, positioning them as a credible player in Canada's urban mobility market.
+
+`
+    },
+    {
+      id: 'ship-finder-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008057.webp',
+      imageAlt: 'cd',
+      bigTitle: `Crafting a Personal Brand That Reflects Confidence and Creativity.`,
+  
+      primaryText:
+`RMAAC built Lara Gelya’s personal branding website on WordPress, a sleek, minimal portfolio showcasing her professional journey and creative work. From UI/UX design to SEO optimization, the site was structured to elevate her personal brand visibility, ensuring fast performance, clean aesthetics, and a strong digital identity.`
+    },
+    {
+      id: 'ship-finder-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008058.webp',
+      imageAlt: 'cd',
+      bigTitle: `Powering Evo Studios’ Digital Presence with a Seamless Media Experience.
+`,
+   
+      primaryText:
+`RMAAC developed Evo Studios’ dynamic website for their media and video production business. The WordPress platform was enhanced with custom video streaming integrations and optimized hosting, providing visitors with smooth playback and quick access to services. The result, a creative hub that brings storytelling and technology together effortlessly.
+
+`
+    },
+    {
+      id: 'ship-finder-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008060.webp',
+      imageAlt: 'cd',
+      bigTitle: `Building Medics UK’s Trusted Healthcare Platform for Patients Nationwide.
+`,
+    
+      primaryText:
+`RMAAC delivered a WordPress-based healthcare website for Medics UK focused on patient experience and reliability. Featuring a streamlined appointment booking system, secure backend maintenance, and mobile-first design, the platform ensures accessibility, trust, and compliance setting up a new benchmark for digital healthcare presence
+
+`
+    },
+    {
+      id: 'ship-finder-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008061.webp',
+      imageAlt: 'cd',
+      bigTitle: `Designing a Luxury Real Estate Experience for Zen Apartments.`,
+      
+      primaryText:
+`RMAAC created Zen Apartments’ digital presence through a high-end real estate website on WordPress. From refined UI/UX design to intuitive property listing management, every element was built to mirror the elegance of the apartments themselves, driving leads, showcasing spaces beautifully, and supporting seamless updates for property managers.`
+    },
+    {
+      id: 'ship-finder-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008062.webp',
+      imageAlt: 'cd',
+      bigTitle: `Building MeanFunnels’ High-Performance Marketing Automation Ecosystem.
+`,
+
+      primaryText:
+`RMAAC developed a Webflow-based marketing automation platform for MeanFunnels, integrating advanced funnel optimization, lead tracking, and SEO-driven landing pages. The end result, a scalable digital engine that converts data into decisions and clicks into customers.`
+    },
+    {
+      id: 'ship-finder-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008063.webp',
+      imageAlt: 'cd',
+      bigTitle: `Empowering FractionalLed with a Data-Driven Consulting Platform.
+`,
+
+      primaryText:
+`RMAAC designed and developed FractionalLed’s Webflow site, a consulting hub blending strategy, analytics, and performance optimization. With integrated dashboards and fast-loading design, it gives startups and enterprises a smarter way to access business insights and growth frameworks.
+
+`
+    },
+    {
+      id: 'ship-finder-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008064.webp',
+      imageAlt: 'cd',
+      bigTitle: `Designing a Digital Wellness Ecosystem with Sehat Zindagi.
+`,
+  
+      primaryText:
+`RMAAC developed Sehat Zindagi’s Webflow-based wellness platform, merging clean UI/UX design with patient management systems and self-assessment tools. Built for accessibility and trust, the website empowers users to take charge of their health journey through technology-led care and community awareness.`
+    },
+    {
+      id: 'ship-finder-slider',
+      imageSrc: '/wp-content/uploads/Group-1000008065.webp',
+      imageAlt: 'cd',
+      bigTitle: `Building a Beauty Brand That Shines Online.`,
+     
+      primaryText:
+`RMAAC launched Alondra Lashes’ Shopify eCommerce store with integrated payment gateways, SEO optimization, and seamless mobile shopping. The platform reflects the brand’s premium aesthetic while making the buying experience smooth, secure, and stunning from first click to checkout.
+
+`
     },
   ]
 
@@ -150,42 +331,42 @@ const DigitalSuccess = () => {
         cards={[
           {
             id: 1,
-            imageSrc: "/wp-content/uploads/Group-1000008068-1.webp",
+            imageSrc: "/wp-content/uploads/branding.webp",
             imageAlt: "Web Development & Revamps",
             title: "Branding Strategy",
             text: "Building brands with a clear voice, sharp visuals, and a story worth remembering."
           },
           {
             id: 2,
-            imageSrc: "/wp-content/uploads/Group-1000008032.webp",
+            imageSrc: "/wp-content/uploads/website.webp",
             imageAlt: "Web Development & Revamps",
             title: "Website Revamp",
             text: "Taking what’s there, making it faster, cleaner, and built to convert from day one."
           },
           {
             id: 3,
-            imageSrc: "/wp-content/uploads/Group-1000008031.webp",
+            imageSrc: "/wp-content/uploads/copywriting.webp",
             imageAlt: "Web Development & Revamps",
             title: "Copywriting",
             text: "Turning ideas into words that move people and keep them clicking."
           },
           {
             id: 4,
-            imageSrc: "/wp-content/uploads/Group-1000008030.webp",
+            imageSrc: "/wp-content/uploads/seo.webp",
             imageAlt: "Web Development & Revamps",
             title: "SEO",
             text: "Turning ideas into words that move people and keep them clicking."
           },
           {
             id: 5,
-            imageSrc: "/wp-content/uploads/Group-1000008029.webp",
+            imageSrc: "/wp-content/uploads/campaigns.webp",
             imageAlt: "Web Development & Revamps",
             title: "Campaigns",
             text: "Launching targeted campaigns that don’t just get noticed, they get results."
           },
           {
             id: 6,
-            imageSrc: "/wp-content/uploads/Mask-group-1.webp",
+            imageSrc: "/wp-content/uploads/social-media.webp",
             imageAlt: "Web Development & Revamps",
             title: "Social Media",
             text: "Keeping brands active, relevant, and impossible to scroll past."
@@ -200,6 +381,7 @@ const DigitalSuccess = () => {
         primaryText=""
         cards={digitalSolutionsCaseStudies}
       />
+      <CompanyCardsCarousel cards={companySliderCards} />
       <DigitalImpact
         bigTitle="Our Digital Marketing Impact"
         records={digitalImpactRecords}

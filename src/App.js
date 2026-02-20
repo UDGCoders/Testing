@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -23,11 +23,33 @@ import Error502 from './pages/Error502';
 import OurApproach from './pages/OurApproach';
 import DigitalSuccess from './pages/DigitalSuccess';
 import MobileSolution from './pages/MobileSolution';
+import SingleLayoutPage from './pages/SingleLayoutPage';
+import { singleLayoutPageData } from './constants/singleLayoutPageData';
 const PageTitle = ({ title, children }) => {
   useEffect(() => {
     document.title = title;
   }, [title]);
   return children;
+};
+
+const SingleLayoutRoute = () => {
+  const { layoutKey } = useParams();
+  const selectedKey = layoutKey || 'singlelayoutpage';
+  const pageData = singleLayoutPageData[selectedKey];
+
+  if (!pageData) {
+    return (
+      <PageTitle title="404 - RMAAC">
+        <NotFound />
+      </PageTitle>
+    );
+  }
+
+  return (
+    <PageTitle title="RMAAC">
+      <SingleLayoutPage pageData={pageData} />
+    </PageTitle>
+  );
 };
 
 function App() {
@@ -51,6 +73,8 @@ function App() {
         <Route path="/ourapproachpage" element={<PageTitle title="RMAAC"><OurApproach /></PageTitle>} />
         <Route path="/digitalsuccesspage" element={<PageTitle title="RMAAC"><DigitalSuccess/></PageTitle>} />
         <Route path="/mobilesolutionpage" element={<PageTitle title="RMAAC"><MobileSolution /></PageTitle>} />
+        <Route path="/singlelayoutpage" element={<SingleLayoutRoute />} />
+        <Route path="/singlelayoutpage/:layoutKey" element={<SingleLayoutRoute />} />
         <Route path="/502" element={<PageTitle title="502 - RMAAC"><Error502 /></PageTitle>} />
         <Route path="*" element={<PageTitle title="404 - RMAAC"><NotFound /></PageTitle>} />
       </Routes>

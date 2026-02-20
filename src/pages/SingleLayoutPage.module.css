@@ -1,0 +1,150 @@
+.page {
+  padding: 40px 0;
+}
+
+.section {
+  margin-top: 80px;
+}
+
+.section:first-child {
+  margin-top: 0;
+}
+
+.topSplit,
+.complexSplit,
+.bottomSplit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+  /* margin-top: 80px; */
+}
+
+.fullImage {
+  width: 100%;
+  margin: 40px 0;
+  border-radius: 16px;
+  object-fit: cover;
+  max-height: 560px;
+}
+
+.listHeading {
+  margin: 24px 0 10px;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.list {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.rightCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.complexRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoCard {
+  margin-top: 20px;
+  border-top: 1px solid #3a3a3a;
+  padding: 18px 0;
+}
+
+.cardTitle {
+  margin: 0 0 10px;
+  font-family: "Inter";
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.mediaSplit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.reverse {
+  direction: rtl;
+}
+
+.reverse > * {
+  direction: ltr;
+}
+
+.mediaImage {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  min-height: 320px;
+}
+
+.graySection {
+  background: #1E2127;
+  margin: 0;
+  margin-top: 80px;
+  padding: 40px 54px;
+}
+
+.bottomLists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.secondLastSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.centeredSection {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .page {
+    padding-top: 110px;
+  }
+
+  .topSplit,
+  .complexSplit,
+  .mediaSplit,
+  .bottomSplit {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .rightCards,
+  .bottomLists {
+    grid-template-columns: 1fr;
+  }
+
+  .mediaImage {
+    min-height: 240px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    margin-top: 40px;
+  }
+
+  .graySection {
+    padding: 40px 0;
+  }
+
+  .cardTitle,
+  .listHeading {
+    font-size: 18px;
+  }
+}

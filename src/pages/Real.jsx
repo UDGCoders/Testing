@@ -18,7 +18,7 @@ const Real = () => {
     {
       id: 'enclave-launch',
       picture: '/wp-content/uploads/Frame-2608314-2.webp',
-      radialBackground: '#00875B',
+      radialBackground: '',
       bigTitle:
         'How Zen Retreats Sold Out 70% of Units Before Completion and Built a Steady Rental Revenue Stream.',
       text:
@@ -86,42 +86,42 @@ const Real = () => {
         cards={[
           {
             id: 1,
-            imageSrc: "/wp-content/uploads/Group-1000008068-1.webp",
+            imageSrc: "/wp-content/uploads/construction-1.webp",
             imageAlt: "Web Development & Revamps",
             title: "Construction Tech Setup",
             text: "From project management software to site monitoring tools, we put the tech in place"
           },
           {
             id: 2,
-            imageSrc: "/wp-content/uploads/Group-1000008032.webp",
+            imageSrc: "/wp-content/uploads/branding-positioning.webp",
             imageAlt: "Web Development & Revamps",
             title: "Branding & Positioning",
             text: "We craft an identity buyers remember from logo and colour palette to a story that sells"
           },
           {
             id: 3,
-            imageSrc: "/wp-content/uploads/Group-1000008031.webp",
+            imageSrc: "/wp-content/uploads/website-portals.webp",
             imageAlt: "Web Development & Revamps",
             title: "Website & Property Portals",
             text: "High-converting sites that showcase listings, capture leads, and keep deals moving"
           },
           {
             id: 4,
-            imageSrc: "/wp-content/uploads/Group-1000008030.webp",
+            imageSrc: "/wp-content/uploads/ai-automation.webp",
             imageAlt: "Web Development & Revamps",
             title: "AI & Automation",
             text: "Integrations that handle client follow-ups, project tracking, and data insights"
           },
           {
             id: 5,
-            imageSrc: "/wp-content/uploads/Group-1000008029.webp",
+            imageSrc: "/wp-content/uploads/marketing.webp",
             imageAlt: "Web Development & Revamps",
             title: "Marketing Campaigns",
             text: "From pre-launch buzz to sold-out openings, our campaigns drive the right buyers"
           },
           {
             id: 6,
-            imageSrc: "/wp-content/uploads/Mask-group-1.webp",
+            imageSrc: "/wp-content/uploads/seo-1.webp",
             imageAlt: "Web Development & Revamps",
             title: "SEO & Local Visibility",
             text: "We make sure you’re found by investors and partners exactly when they’re searching."

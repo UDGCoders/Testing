@@ -25,7 +25,7 @@ const MobileSolution = () => {
     {
       id: 'clinic-funnel',
       picture: '/wp-content/uploads/Frame-2608314-3.webp',
-      radialBackground: '#16cba190',
+      radialBackground: '',
       bigTitle:
         'An AI background remover loved across the US, Canada, and the Netherlands',
       text:
@@ -60,7 +60,7 @@ const MobileSolution = () => {
     {
       id: 'magic-ai',
       picture: '/wp-content/uploads/Layer_1-5.webp',
-      radialBackground: '#A1FFB2',
+      radialBackground: '',
       bigTitle:
         'Incorporating a smarter way to erase unwanted objects in no time, powered by AI precision.',
       text:
@@ -90,7 +90,7 @@ const MobileSolution = () => {
     {
       id: 'Ship Finder',
       picture: '/wp-content/uploads/Frame-2608314-4.webp',
-      radialBackground: '#00CC25',
+      radialBackground: '',
       bigTitle:
         'Real-time vessel tracking for hobbyists and professionals alike.',
       text:
@@ -159,42 +159,42 @@ const MobileSolution = () => {
         cards={[
           {
             id: 1,
-            imageSrc: "/wp-content/uploads/Group-1000008068-1.webp",
+            imageSrc: "/wp-content/uploads/secure-data.webp",
             imageAlt: "Web Development & Revamps",
             title: "Secure Data Architecture",
             text: "Encryption at every interaction, from login to logout"
           },
           {
             id: 2,
-            imageSrc: "/wp-content/uploads/Group-1000008032.webp",
+            imageSrc: "/wp-content/uploads/gdpr.webp",
             imageAlt: "Web Development & Revamps",
             title: "GDPR & CCPA Compliance",
             text: "Global regulations baked in, so you stay compliant "
           },
           {
             id: 3,
-            imageSrc: "/wp-content/uploads/Group-1000008031.webp",
+            imageSrc: "/wp-content/uploads/lighting-fast.webp",
             imageAlt: "Web Development & Revamps",
             title: "Lightning-Fast Performance ",
             text: "Optimized for speed on every network, from 5G to 3G"
           },
           {
             id: 4,
-            imageSrc: "/wp-content/uploads/Group-1000008030.webp",
+            imageSrc: "/wp-content/uploads/cloud-storage.webp",
             imageAlt: "Web Development & Revamps",
             title: "Cloud Storage & Transfer",
             text: "Safe, scalable, and accessible, so your app grows with your user base"
           },
           {
             id: 5,
-            imageSrc: "/wp-content/uploads/Group-1000008029.webp",
+            imageSrc: "/wp-content/uploads/intuitive.webp",
             imageAlt: "Web Development & Revamps",
             title: "Intuitive UX & UI Design",
             text: "User-friendly interfaces so you know exactly what to do without a manual"
           },
           {
             id: 6,
-            imageSrc: "/wp-content/uploads/Mask-group-1.webp",
+            imageSrc: "/wp-content/uploads/cross-platform.webp",
             imageAlt: "Web Development & Revamps",
             title: "Cross-Platform Optimization",
             text: "iOS, Android, tablets, your app should shine everywhere."

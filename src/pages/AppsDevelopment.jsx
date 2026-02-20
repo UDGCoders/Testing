@@ -87,7 +87,7 @@ const AppsDevelopment = () => {
       listData={listdata1}
       src="/wp-content/uploads/EVO-1-1.webp"
       />
-      <ClientsTestinomials bigTitle="Founders. Startups. Studios." smallTitle="Here's Why They Work With RMAAC" clientName="Ali M — Solo Founder, Lahore"
+      <ClientsTestinomials bigTitle="Founders. Startups. Studios." smallTitle="Here's Why They Work With RMAAC" titleLayout="column" clientName="Ali M — Solo Founder, Lahore"
       clientReview="I had an idea. That’s it. RMAAC helped me turn it into a working app, monetize it, and scale it to 1,000+ paid users in months."
       />
       <ClientsTestinomials clientName="Hassan T — Marketing Lead, Karachi"

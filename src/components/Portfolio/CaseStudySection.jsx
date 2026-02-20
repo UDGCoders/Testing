@@ -9,7 +9,7 @@ const defaultCards = [
   {
     id: 'ai-vigil',
     picture: '/wp-content/uploads/Frame-2608314.webp',
-    radialBackground: '#150958',
+    radialBackground: '',
     bigTitle:
       'Delivering AI-Powered IT and Cybersecurity That Cut Downtime by 68% and Reduced Client IT Costs by Over 500K',
     text:
@@ -43,7 +43,7 @@ const defaultCards = [
   {
     id: 'scaling-suite',
     picture: '/wp-content/uploads/Frame-2608314-1.webp',
-    radialBackground: '#61DFFC',
+    radialBackground: '',
     bigTitle:
       'How a SaaS Startup Launched a Fully Branded CRM and Secured 5 Industries in Under 8 Weeks',
     text:

@@ -25,16 +25,30 @@ h4{
 }
 .topconatiner{
   
-    margin-top: 40px;
+    margin-top: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* gap: 6px; */
-    width: 50%;
+    gap: 10px;
+    width: min(92%, 1200px);
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.topconatiner :global(h2){
+  font-size: clamp(22px, 2.4vw, 38px);
+  line-height: 1.1;
+  margin: 0;
+  white-space: nowrap;
+}
+.columnLayout{
+  flex-direction: column;
+  gap: 6px;
+}
+.columnLayout :global(h2){
+  white-space: normal;
 }
 
 .img {
@@ -65,6 +79,10 @@ h4{
   .topconatiner{
     width: 100%;
     padding: 0 24px;
+    flex-wrap: wrap;
+  }
+  .topconatiner :global(h2){
+    white-space: normal;
   }
   .outerWrap {
     padding: 0 24px;

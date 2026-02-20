@@ -4,10 +4,13 @@ import BigTitle from "./BigTitle";
 import SmallTitle from "./SmallTitle";
 import PrimaryText from "./PrimaryText";
 const ClientsTestinomials = (props) => {
+  const titleLayoutClass =
+    props.titleLayout === "column" ? styles.columnLayout : "";
+
   return (
     <>
       {(props.bigTitle && props.smallTitle) && (
-  <div className={` ${styles.topconatiner}`}>
+  <div className={`${styles.topconatiner} ${titleLayoutClass}`.trim()}>
     {props.bigTitle && <BigTitle bigTitle={props.bigTitle} />}
     {props.smallTitle && <SmallTitle smallTitle={props.smallTitle} />}
   </div>

@@ -71,7 +71,7 @@ const Automation = () => {
             id: 3,
             imageSrc: "/wp-content/uploads/Group-1000008031.webp",
             imageAlt: "Web Development & Revamps",
-            title: "Custom ChatbotsÂ ",
+            title: "Custom Chatbots",
             text: "Conversational AI assistants that handle customer queries, book appointments, and collect leads 24/7.Â "
           },
           {

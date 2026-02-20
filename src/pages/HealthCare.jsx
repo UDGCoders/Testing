@@ -22,7 +22,7 @@ const HealthCare = () => {
     {
       id: 'clinic-funnel',
       picture: '/wp-content/uploads/Frame-2608314-3.webp',
-      radialBackground: '#16cba190',
+      radialBackground: '',
       bigTitle:
         'A HIPAA-compliant website built to earn trust, attract leads, and secure investor confidence.',
       text:
@@ -45,7 +45,7 @@ const HealthCare = () => {
     {
       id: 'sehat-zindagi',
       picture: '/wp-content/uploads/Layer_1-5.webp',
-      radialBackground: '#A1FFB2',
+      radialBackground: '',
       bigTitle:
         'Connecting UK-Level Primary Care with Every Home in Pakistan. A telehealth platform making trusted healthcare accessible nationwide.',
       text:
@@ -68,7 +68,7 @@ const HealthCare = () => {
     {
       id: 'Simple',
       picture: '/wp-content/uploads/Frame-2608314-4.webp',
-      radialBackground: '#00CC25',
+      radialBackground: '',
       bigTitle:
         'From Newcomer to UK Trusted Healthcare Brand Serving 1,000+ Patients.',
       text:
@@ -124,42 +124,42 @@ const HealthCare = () => {
         cards={[
           {
             id: 1,
-            imageSrc: '/wp-content/uploads/Group-1000008068-1.webp',
+            imageSrc: '/wp-content/uploads/secure-patient-data.webp',
             imageAlt: 'Patient Journey Optimization',
             title: 'Secure Patient Data Systems',
             text: 'End-to-end encryption so every record stays private, from appointment to archive.',
           },
           {
             id: 2,
-            imageSrc: '/wp-content/uploads/Group-1000008032.webp',
+            imageSrc: '/wp-content/uploads/regulatory.webp',
             imageAlt: 'Clinical Workflow Automation',
             title: 'Regulatory-Ready Compliance',
             text: 'HIPAA, GDPR, or local health laws, we bake it in from day one',
           },
           {
             id: 3,
-            imageSrc: '/wp-content/uploads/Group-1000008031.webp',
+            imageSrc: '/wp-content/uploads/fast-performance.webp',
             imageAlt: 'Patient Support Chatbots',
             title: 'Fast Performance',
             text: 'Optimized to load in seconds, even on low-bandwidth hospital networks.',
           },
           {
             id: 4,
-            imageSrc: '/wp-content/uploads/Group-1000008030.webp',
+            imageSrc: '/wp-content/uploads/cloud-infrastructure.webp',
             imageAlt: 'Healthcare Dashboards',
             title: 'Cloud-First Infrastructure',
             text: 'Scalable, secure storage that grows with your patient base.',
           },
           {
             id: 5,
-            imageSrc: '/wp-content/uploads/Group-1000008029.webp',
+            imageSrc: '/wp-content/uploads/intuitive-patient.webp',
             imageAlt: 'Patient CRM Systems',
             title: 'Intuitive Patient & Provider Experience',
             text: 'Interfaces that feel effortless for everyone, no manuals required.',
           },
           {
             id: 6,
-            imageSrc: '/wp-content/uploads/Mask-group-1.webp',
+            imageSrc: '/wp-content/uploads/cross-device.webp',
             imageAlt: 'Security and Compliance',
             title: 'Cross-Device Compatibility',
             text: 'From desktops to tablets to mobiles, your platform works everywhere, every time',
