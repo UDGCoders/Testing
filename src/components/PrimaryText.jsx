@@ -3,7 +3,7 @@ import styles from './PrimaryText.module.css'
 const PrimaryText = (props) => {
   return (
     <>
-        <p className={styles.primaryText}>{props.primaryText}</p>
+        <span className={styles.primaryText}>{props.primaryText}</span>
     </>
   )
 }

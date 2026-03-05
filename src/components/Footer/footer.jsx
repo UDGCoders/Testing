@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Footer.module.css'
 import PrimaryButton from '../PrimaryButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 const Footer = () => {
     return (
@@ -10,9 +11,11 @@ const Footer = () => {
                 <div className={`container-fluid px-0 ${styles.footer}`}>
                     <div className="row g-0">
                         <div className="col-sm-5">
-                            <img src="/wp-content/uploads/Logo-2-1-1.webp" alt="company logo" className='img-fluid' />
+                            <img src="/wp-content/uploads/Logo-2-1-1.webp" loading='lazy' alt="" className='img-fluid' />
                             <p className={`${styles.txtdescription} mt-3 w-75`}>From code to concrete — RMAAC reshapes industries through digital, healthcare, AI, and real estate innovation.</p>
+                           <Link to ="/contactpage">
                             <PrimaryButton btntxt="Get Started" />
+                           </Link>
                         </div>
 
                         <div className="col-sm-2 flex-grow-1 mt-md-0 mt-4">
@@ -62,13 +65,13 @@ const Footer = () => {
                         <div className="col-sm-6 ">
                             <ul className={`list-unstyled d-flex gap-3 justify-content-end ${styles.socialIcons}`}>
                                 <li>
-                                    <a href="/"><FontAwesomeIcon icon={faFacebookF} /></a>
+                                    <a href="https://www.facebook.com/RmaacTechnologies/"><FontAwesomeIcon icon={faFacebookF} /></a>
                                 </li>
                                 <li>
-                                    <a href="/"><FontAwesomeIcon icon={faTwitter} /></a>
+                                    <a href="https://www.linkedin.com/company/rmaac-group/"><FontAwesomeIcon icon={faTwitter} /></a>
                                 </li>
                                 <li>
-                                    <a href="/"><FontAwesomeIcon icon={faInstagram} /></a>
+                                    <a href="https://www.instagram.com/rmaacgroup"><FontAwesomeIcon icon={faInstagram} /></a>
                                 </li>
                             </ul>
                         </div>

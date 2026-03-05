@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Reasons.module.css";
 import BigTitle from "./BigTitle";
 import SmallTitle from "./SmallTitle";
 import PrimaryText from "./PrimaryText";
 
 const Reasons = (props) => {
+  // const navigate = useNavigate();
   const {
     bigTitle,
     smallTitle,
@@ -20,7 +22,7 @@ const Reasons = (props) => {
     : [
         {
           imageSrc: "/wp-content/uploads/677fc09f4f39272a4a8cec86_Group201009002650.svg_.png",
-          imageAlt: "card",
+          imageAlt: "",
           title: "EXPERTISE & SPECIALIZATION",
           text: "We incubate and create new ventures with real-world relevance",
           buttonText: "Work with us",
@@ -28,7 +30,7 @@ const Reasons = (props) => {
         },
         {
           imageSrc: "/wp-content/uploads/677fc09f4f39272a4a8cec84_Group201000001874.svg_.webp",
-          imageAlt: "card",
+          imageAlt: "",
           title: "RESULTS DRIVEN APPROACH",
           text: "We invest with aligned teams and strategic collaborators",
           buttonText: "Work with us",
@@ -36,7 +38,7 @@ const Reasons = (props) => {
         },
         {
           imageSrc: "/wp-content/uploads/677fc09f4f39272a4a8cec87_Group201009002709.svg-fill-1.webp",
-          imageAlt: "card",
+          imageAlt: "",
           title: "SEAMLESS COLLABORATION",
           text: "We apply systems, automation, and market insight to grow efficiently",
           buttonText: "Work with us",
@@ -51,12 +53,7 @@ const Reasons = (props) => {
         className={`container-fluid ${styles.reasons} ${
           variant === "automation" ? styles.automation : ""
         }`}
-        style={{
-          background: "url(/wp-content/uploads/677678301e8cf8c5c09af794_portfolio20line.svg-fill-1.webp)",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "contain",
-        }}
+
       >
         <div className="container">
           <div className="row justify-content-center align-items-center">
@@ -88,7 +85,7 @@ const Reasons = (props) => {
               >
                 <div className={styles.cardInner}>
                   {card.imageSrc ? (
-                    <img src={card.imageSrc} alt={card.imageAlt || "card"} />
+                    <img src={card.imageSrc} alt="" />
                   ) : null}
                   {card.title ? <h2 className={styles.transform}>{card.title}</h2> : null}
                   {card.text ? <p className={styles.transform}>{card.text}</p> : null}
@@ -99,9 +96,17 @@ const Reasons = (props) => {
                       ))}
                     </ul>
                   ) : null}
+                    <Link to="/contactpage">
                   {card.buttonText ? (
-                    <button className={styles.cardButton}>{card.buttonText}</button>
+                    
+                      <button
+                        className={styles.cardButton}
+                        // onClick={() => navigate("/contactpage")}
+                      >
+                        {card.buttonText}
+                      </button>
                   ) : null}
+                  </Link>
                 </div>
               </div>
             ))}

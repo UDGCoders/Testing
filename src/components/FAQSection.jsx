@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './FAQSection.module.css';
 import BigTitle from './BigTitle';
 import SmallTitle from './SmallTitle';

@@ -2,14 +2,12 @@
     margin-top: 80px;
 }
 .bigtitle{
-    font-family: 'Inter',serif;
-    font-display: swap;
+    font-family: 'Inter';
     font-size: clamp(28px,4vw,50px);
     line-height: 1.3rem;
 }
 .smallTitle{
-    font-family: 'Italiana',serif;
-    font-display: swap;
+    font-family: 'Italiana';
     font-size: clamp(28px,4vw,50px);
     line-height: 1.3rem;
 }

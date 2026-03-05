@@ -1,12 +1,47 @@
 .cardSection {
-  margin-top: 80px;
-  background: #232427;
+  margin-bottom: 80px;
+  background: #23242741;
   padding: 80px 0;
+}
+
+.cardCol {
+  display: flex;
+  margin: 10px 0;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.3);
+  /* box-shadow: inset 2px 2px 1px #73737342; */
+  /* animation: scale-up ; */
+  animation-name:scale-up ;
+
+}
+@keyframes scale-up {
+  from {
+    /* background-color: rgba(0, 0, 0, 0.231); */
+    transform: scaleX(0);
+  }
+  to {
+    /* background-color: darkred; */
+    transform: scaleX(1);
+  }
+}
+
+#progressbar {
+  animation: 2.5s linear forwards scale-up;
+}
+
+.cardContent {
+  width: 100%;
+  /* min-height: 280px; */
 }
 
 @media screen and (max-width: 768px) {
   .cardSection {
     margin-top: 40px;
     padding: 40px 24px;
+  }
+
+  .cardContent {
+    min-height: 220px;
   }
 }

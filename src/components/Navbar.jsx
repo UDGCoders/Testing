@@ -17,12 +17,13 @@ function Navbar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg app-navbar">
-        <div className="container">
+        <div className="container pt-3">
           <Link className="navbar-brand" to="/" onClick={closeMobileMenu}>
             <img
               src="/wp-content/uploads/Logo-2-1-1.webp"
-              alt="rmaac logo"
-              loading="eager"
+              alt=""
+              loading="lazy"
+              className="img-fluid"
             />
           </Link>
           <button
@@ -88,7 +89,7 @@ function Navbar() {
                       to="/itsolutionspage"
                       onClick={closeMobileMenu}
                     >
-                      REAL ESTATE DEVELOPMENT & IT SOLUTIONS
+                      Enterprise Automation & IT SOLUTIONS
                     </Link>
                   </li>
                   <li>

@@ -4,12 +4,11 @@
     margin-top: 80px;
 }
 .impact h2{
-    font-family: 'Inter',serif;
+    font-family: 'Inter';
     font-size: clamp(30px,4vw,64px);
     line-height: 1.3em;
     font-weight: 400;
     align-self: center;
-    font-display: swap;
 }
 @media screen and (max-width:768px) {
     .impact h2{

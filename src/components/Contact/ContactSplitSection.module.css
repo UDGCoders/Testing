@@ -1,6 +1,16 @@
-.contactSplitSection{
-    
+
+.w75{
+    width: 75% !important;
 }
 @media screen and (max-width:768px) {
-
+ .border-end{
+    border: none !important;
+ }
+ .contactSplitSection{
+    margin-top: 40px;
+ }
+ .w75{
+    width: 100% !important;
+    margin-top: 10px !important;
+ }
 }

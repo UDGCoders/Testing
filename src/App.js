@@ -25,6 +25,10 @@ import DigitalSuccess from './pages/DigitalSuccess';
 import MobileSolution from './pages/MobileSolution';
 import SingleLayoutPage from './pages/SingleLayoutPage';
 import { singleLayoutPageData } from './constants/singleLayoutPageData';
+import {HelmetProvider} from 'react-helmet-async';
+
+
+
 const PageTitle = ({ title, children }) => {
   useEffect(() => {
     document.title = title;
@@ -54,6 +58,7 @@ const SingleLayoutRoute = () => {
 
 function App() {
   return (
+    <HelmetProvider>
     <Router>
       <Navbar />
       <BackgroundDots />
@@ -81,6 +86,7 @@ function App() {
 
       <Footer />
     </Router>
+    </HelmetProvider>
   );
 }
 

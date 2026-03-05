@@ -90,7 +90,7 @@ export default function TimeLineAbout({ items = [] }) {
                   <div className={styles.card}>
                     <img 
                       src={item.image} 
-                      alt={item.title} 
+                      alt="" 
                       className={styles.cardImg} 
                     />
                     <div className={styles.cardContent}>

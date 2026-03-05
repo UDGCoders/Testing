@@ -3,6 +3,8 @@ import Hero from '../components/Hero'
 import useScrollTarget from '../hooks/useScrollTarget';
 import ContactCard from '../components/Contact/ContactCard';
 import ContactSplitSection from '../components/Contact/ContactSplitSection';
+import { Helmet } from 'react-helmet-async';
+
 
 const Contact = () => {
     const texts = ["GET IN TOUCH"];
@@ -22,6 +24,10 @@ const Contact = () => {
   };
   return (
     <>
+          <Helmet>
+        <title>RMAAC</title>
+        <meta name='description' content='Welcome to the site of most moderen world 3d websites will be built for you here'/>
+        </Helmet>
           <div className="headerbackground h-100">
         <video
           autoPlay
@@ -45,14 +51,14 @@ const Contact = () => {
           <Hero
             animatedTexts={texts}
           />
+              <ContactCard onLocationClick={handleLocationClick} />
         </div>
       </div>
-            <div id="scroll-down">
-              <ContactCard onLocationClick={handleLocationClick} />
+            <div >
             </div>
             {showMap && (
-              <section className="container my-5" id="contact-map">
-                <div className="d-flex justify-content-end mb-3">
+              <section className="container my-5" id="contact-map ">
+                <div className="d-flex justify-content-end mb-3" id="scroll-down">
                   <button
                     type="button"
                     className="btn btn-outline-light"

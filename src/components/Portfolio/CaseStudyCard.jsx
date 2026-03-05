@@ -49,7 +49,7 @@ const CaseStudyCard = ({
     >
       {picture ? (
         <div className={styles.media}>
-          <img src={picture} alt={bigTitle || 'Case study'} />
+          <img src={picture} alt="" />
         </div>
       ) : null}
       <div className={styles.body}>

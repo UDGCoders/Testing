@@ -8,6 +8,7 @@ import Reasons from '../components/Reasons';
 import Gallery from '../components/About/Gallery';
 import Testimonials from '../components/About/Testimonials';
 import Marquee from '../components/Marquee/Marquee';
+import { Helmet } from 'react-helmet-async';
 const About = () => {
   useScrollTarget()
 
@@ -58,6 +59,10 @@ const About = () => {
   ];
   return (
     <>
+          <Helmet>
+            <title>RMAAC</title>
+            <meta name='description' content='Welcome to the site of most moderen world 3d websites will be built for you here'/>
+            </Helmet>
       <div className="headerbackground h-100">
         <video
           autoPlay
@@ -65,8 +70,8 @@ const About = () => {
           muted
           playsInline
           className="background-video"
-          preload="none"
-          loading="lazy"
+          // preload="none"
+          loading="eager"
         >
           <source src="/wp-content/uploads/about-bg-video-2.mp4" type="video/mp4" />
         </video>
@@ -95,14 +100,14 @@ const About = () => {
       cards={[
         {
           imageSrc: "/wp-content/uploads/677fc09f4f39272a4a8cec86_Group201009002650.svg_.png",
-          imageAlt: "card",
+          imageAlt: "",
           title: "EXPERTISE & SPECIALIZATION",
           text: "We incubate and create new ventures with real-world relevance",
           buttonText: "Work with us",
         },
         {
           imageSrc: "/wp-content/uploads/677fc09f4f39272a4a8cec84_Group201000001874.svg_.webp",
-          imageAlt: "card",
+          imageAlt: "",
           title: "RESULTS DRIVEN APPROACH",
           text: "We invest with aligned teams and strategic collaborators",
           buttonText: "Work with us",
@@ -110,7 +115,7 @@ const About = () => {
         },
         {
           imageSrc: "/wp-content/uploads/677fc09f4f39272a4a8cec87_Group201009002709.svg-fill-1.webp",
-          imageAlt: "card",
+          imageAlt: "",
           title: "SEAMLESS COLLABORATION",
           text: "We apply systems, automation, and market insight to grow efficiently",
           buttonText: "Work with us",

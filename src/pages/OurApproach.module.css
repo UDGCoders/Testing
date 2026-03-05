@@ -53,9 +53,7 @@
   white-space: normal;
 }
 
-.investmentPrimaryText {
-  margin-top: 40px;
-}
+
 
 .strategicModelSection {
   margin-top: 80px;
@@ -106,7 +104,7 @@
 }
 
 .stepNo {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: Inter;
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.16em;
@@ -115,15 +113,15 @@
 }
 
 .stepTitle {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: Inter;
   font-weight: 700;
   font-size: 18px;
   margin: 0 0 10px;
 }
 
 .stepText {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-weight: 300;
+  font-family: Inter;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.6;
   opacity: 0.92;
@@ -133,7 +131,7 @@
 .stepList {
   margin: 14px 0 0;
   padding-left: 18px;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: Inter;
   font-size: 13px;
   line-height: 1.7;
   opacity: 0.9;

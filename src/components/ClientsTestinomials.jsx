@@ -24,7 +24,7 @@ const ClientsTestinomials = (props) => {
            <div className="image">
             <img
               src="/wp-content/uploads/Frame-2608293.webp"
-              alt="ratings" className="img-fluid"
+              alt="" className="img-fluid"
               loading="lazy"
               decoding="async"
             /></div>

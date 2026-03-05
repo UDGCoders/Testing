@@ -35,7 +35,7 @@ const SpliteSectionLeft = (props) => {
               ) : (
                 <img
                   src={props.src}
-                  alt={props.alt || 'Diversifeid'}
+                  alt=""
                   className={`img-fluid h-100 ${styles.image} ${styles.media} ${props.disableGrayscale ? styles.noGrayscale : ''}`}
                   loading="lazy"
                   decoding="async"
@@ -63,10 +63,11 @@ const SpliteSectionLeft = (props) => {
 
             {/* check for the text 
             if avaialble then show with default style */}
-
+            <div className="mt-3">
             {props.primaryText && (
               <PrimaryText primaryText={props.primaryText} />
             )}
+            </div>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
               {props.present && (
                 <div

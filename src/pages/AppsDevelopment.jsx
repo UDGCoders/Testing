@@ -1,6 +1,9 @@
 import React, { lazy, Suspense } from 'react'
 import { useNavigate } from "react-router-dom";
 import Hero from '../components/Hero'
+import { scrollCardsData } from '../constants/scrollCardsData';
+import { Helmet } from 'react-helmet-async';    
+
 
 const CenteredTexts = lazy(() => import('../components/Services/CenteredTexts'))
 const ScrollCards = lazy(() => import('../components/Cards/ScrollCards'))
@@ -37,6 +40,10 @@ const AppsDevelopment = () => {
 
     return (
         <>
+              <Helmet>
+        <title>RMAAC</title>
+        <meta name='description' content='Welcome to the site of most moderen world 3d websites will be built for you here'/>
+        </Helmet>
             <div className="headerbackground h-100">
                 <video
                     autoPlay
@@ -100,7 +107,7 @@ const AppsDevelopment = () => {
                 primaryText="At RMAAC, we don’t chase downloads. We build digital assets that generate revenue, grow user bases, and prove market fit. Ready to build your next product — with a partner who sees it through?"
                 btntxt="BOOK A STRATEGY Call"   
             />
-            <ScrollCards />
+            <ScrollCards cards={scrollCardsData} />
             </Suspense>
         </>
     )

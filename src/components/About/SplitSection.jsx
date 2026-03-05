@@ -19,16 +19,19 @@ const SplitSection = (props,ref) => {
         <div className={`container ${styles.splitSection}`} >
         <div className={`row align-items-md-center ${mobileOrderClass} flex-md-row`} id={props.id ? props.id : ""}>
             <div className={hasMedia ? 'col-md-6' : 'col-12'}>
-                <BigTitle bigTitle={props.bigTitle}/>
+
+              <h2>
+                 <BigTitle bigTitle={props.bigTitle}/>
                 {props.smallTitle && <SmallTitle smallTitle={props.smallTitle}/>}
+                </h2> 
                 <div className="mt-3">
                 {props.primaryText && <PrimaryText primaryText={props.primaryText}/>}
                 </div>
                 {hasButtonText && (
-                  <PrimaryButton
+                <p>  <PrimaryButton
                     btntxt={props.btntxt}
                     onClick={props.onButtonClick}
-                  />
+                  /></p>
                 )}
                 {props.listData && props.listData.length > 0 && (
               <div className="mt-3">
@@ -64,7 +67,7 @@ const SplitSection = (props,ref) => {
                   ) : (
                     <img
                       src={props.src}
-                      alt={props.alt || 'Diversifeid'}
+                      alt=""
                       className={`img-fluid ${styles.image} ${styles.media}`}
                       loading="lazy"
                       decoding="async"

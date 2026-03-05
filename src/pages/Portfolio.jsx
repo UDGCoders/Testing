@@ -4,6 +4,9 @@ import Hero from '../components/Hero'
 import useScrollTarget from '../hooks/useScrollTarget';
 import SplitSection from '../components/About/SplitSection';
 import SpliteSectionLeft from '../components/About/SpliteSectionLeft';
+import { Helmet } from 'react-helmet-async';
+
+
 const Portfolio = () => {
     const texts = ["OUR PORTFOLIO"];
     
@@ -16,6 +19,10 @@ const Portfolio = () => {
     const goToHealthcare = () => navigate('/healthcarepage');
     return (
         <>
+              <Helmet>
+        <title>RMAAC</title>
+        <meta name='description' content='Welcome to the site of most moderen world 3d websites will be built for you here'/>
+        </Helmet>
             <div className="headerbackground h-100">
                 <video
                     autoPlay

@@ -1,17 +1,52 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
-const cardData = [
-  { id: 1, title: "Construction", src: "/wp-content/uploads/construction-scaled-1.webp" },
-  { id: 2, title: "App Development", src: "/wp-content/uploads/appdevelopment-scaled-1.webp" },
-  { id: 3, title: "Digital Marketing", src: "/wp-content/uploads/digitalmarketing-scaled-1.webp" },
-  { id: 4, title: "IT Solutions", src: "/wp-content/uploads/itsolutions-scaled-2.webp" },
-];
+const ScrollCards = ({ cards }) => {
+  const navigate = useNavigate();
 
-const ScrollCards = () => {
-  // We duplicate the array to ensure a seamless loop. 
-  // Doubling works if the total width exceeds the screen width.
-  const duplicatedCards = [...cardData, ...cardData];
+  if (!Array.isArray(cards) || cards.length === 0) {
+    return null;
+  }
+
+  const duplicatedCards = [...cards, ...cards];
+
+  const getRedirectTarget = (card) => {
+    if (!card || typeof card !== 'object') {
+      return '';
+    }
+
+    return (
+      card.redirectTo ||
+      card.redirectPath ||
+      card.path ||
+      card.link ||
+      card.href ||
+      ''
+    );
+  };
+
+  const handleCardRedirect = (target) => {
+    if (typeof target !== 'string') {
+      return;
+    }
+
+    const trimmedTarget = target.trim();
+
+    if (!trimmedTarget) {
+      return;
+    }
+
+    if (
+      trimmedTarget.startsWith('http://') ||
+      trimmedTarget.startsWith('https://')
+    ) {
+      window.location.href = trimmedTarget;
+      return;
+    }
+
+    navigate(trimmedTarget);
+  };
 
   const containerStyle = {
     overflow: 'hidden',
@@ -33,6 +68,10 @@ const ScrollCards = () => {
     borderRadius: '6px',
     overflow: 'hidden',
     flexShrink: 0,
+  };
+
+  const clickableCardStyle = {
+    cursor: 'pointer',
   };
 
   const imageStyle = {
@@ -64,14 +103,40 @@ const ScrollCards = () => {
           repeat: Infinity,
         }}
       >
-        {duplicatedCards.map((card, index) => (
-          <div key={index} style={cardStyle}>
-            <img src={card.src} alt={card.title} style={imageStyle} />
-            <div style={overlayStyle}>
-              {card.title}
+        {duplicatedCards.map((card, index) => {
+          const redirectTarget = getRedirectTarget(card);
+          const isClickable = Boolean(redirectTarget);
+
+          return (
+            <div
+              key={`${card.id ?? 'card'}-${index}`}
+              style={{
+                ...cardStyle,
+                ...(isClickable ? clickableCardStyle : {}),
+              }}
+              onClick={
+                isClickable
+                  ? () => handleCardRedirect(redirectTarget)
+                  : undefined
+              }
+              onKeyDown={
+                isClickable
+                  ? (event) => {
+                      if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        handleCardRedirect(redirectTarget);
+                      }
+                    }
+                  : undefined
+              }
+              role={isClickable ? 'link' : undefined}
+              tabIndex={isClickable ? 0 : undefined}
+            >
+              <img src={card.src} alt="" style={imageStyle} />
+              {card.title ? <div style={overlayStyle}>{card.title}</div> : null}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </motion.div>
     </div>
   );

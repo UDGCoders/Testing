@@ -6,6 +6,9 @@ import DigitalImpact from '../components/Portfolio/DigitalImpact';
 import Reasons from '../components/Reasons';
 import Fixes from '../components/Portfolio/Fixes'
 import CenteredTexts from '../components/Services/CenteredTexts';
+import { Helmet } from 'react-helmet-async';
+
+
 const Real = () => {
   const digitalImpactRecords = [
     { id: 'units-sold', targetNumber: 40, title: 'Property & development websites launched', prefix: '+' },
@@ -51,6 +54,10 @@ const Real = () => {
 
   return (
     <>
+          <Helmet>
+        <title>RMAAC</title>
+        <meta name='description' content='Welcome to the site of most moderen world 3d websites will be built for you here'/>
+        </Helmet>
     <div className="headerbackground h-100">
         <video
           autoPlay

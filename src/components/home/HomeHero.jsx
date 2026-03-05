@@ -18,7 +18,7 @@ const HomeHero = ({ main, texts }) => {
   return (
     <div className="hero">
       <div className="text-center">
-      {main && <h2 className='maintext'>{main}</h2>}
+      {main && <h1 className='maintext'>{main}</h1>}
 
       <div className="text-wrapper">
         <AnimatePresence mode="wait">

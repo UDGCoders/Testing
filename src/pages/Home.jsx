@@ -9,14 +9,21 @@ import CeoMeasures from '../components/home/CEO/CeoMeasures';
 import Team from '../components/home/Team/Team';
 import Customers from '../components/home/customers/Customers';
 import Build from '../components/home/Build/Build';
+import { Helmet } from 'react-helmet-async';
 import 'bootstrap/dist/css/bootstrap.min.css';
 function Home() {
   const texts = ["Success", "INOVATIONS", "GROWTH"];
 
-  const Simg=["/wp-content/uploads/Testimonials-pics.webp","/wp-content/uploads/persons1.webp"]
+  const Simg = [
+    "/wp-content/uploads/Testimonials-pics-1.webp",
+    "/wp-content/uploads/persons1-1-1.webp",
+  ];
   return (
     <>
-      
+      <Helmet>
+        <title>RMAAC</title>
+        <meta name='description' content='Welcome to the site of most moderen world 3d websites will be built for you here'/>
+        </Helmet>
       <div className="headerbackground h-100">
         <video
           autoPlay
@@ -24,11 +31,13 @@ function Home() {
           muted
           playsInline
           className="background-video"
-          preload="none"
-          loading="lazy"
+          // preload="auto"
+          // loading="eager"
         >
           <source src="/wp-content/uploads/GettyImages-1309565446-1.mp4" type="video/mp4" />
         </video>
+        {/* <video autoPlay="true" loop muted="" playsInline="" className="background-video">
+          <source src="/wp-content/uploads/GettyImages-1309565446-1.mp4" type="video/mp4"/>Your browser does not support the video tag.</video> */}
         <div className="video-overlay"></div>
 
         <div className="header-content">

@@ -13,10 +13,12 @@ const TestimonialCard = (props) => {
         }}
       >
         <h4 className={styles.cardHeading}>{props.employee} </h4>
-        <PrimaryText primaryText={props.says} />
+        <div className="mt-3">
+                  <PrimaryText primaryText={props.says} />
+        </div>
         <img
           src="/wp-content/uploads/Frame-2608293.webp"
-          alt="ratings"
+          alt=""
           className={styles.image}
         />
       </div>

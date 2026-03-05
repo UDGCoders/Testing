@@ -6,7 +6,7 @@ const PortfolioCard = ({ imageSrc, imageAlt, title, text }) => {
     <div className={styles.card}>
       <div className={styles.imageWrap}>
         {imageSrc ? (
-          <img src={imageSrc} alt={imageAlt || title || 'Portfolio item'} />
+          <img src={imageSrc} alt="" />
         ) : null}
       </div>
       <div className={styles.content}>

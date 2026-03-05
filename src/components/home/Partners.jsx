@@ -20,7 +20,9 @@ const Partners = (props) => {
                                             <h3 className={styles.questionText}>{props.title}</h3>
                                         </div>
                                         <div className={styles.customBody}>
+                                            <div className="mt-3">
                                             <p>{props.description}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

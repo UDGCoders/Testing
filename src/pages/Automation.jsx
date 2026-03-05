@@ -9,6 +9,10 @@ import DigitalImpact from '../components/Portfolio/DigitalImpact';
 import Reasons from '../components/Reasons';
 import Fixes from '../components/Portfolio/Fixes'
 import CenteredTexts from '../components/Services/CenteredTexts';
+import { Helmet } from 'react-helmet-async';
+
+
+
 const Automation = () => {
 
   useScrollTarget();
@@ -23,6 +27,10 @@ const Automation = () => {
 
   return (
     <>
+          <Helmet>
+        <title>RMAAC</title>
+        <meta name='description' content='Welcome to the site of most moderen world 3d websites will be built for you here'/>
+        </Helmet>
       <div className="headerbackground h-100">
         <video
           autoPlay

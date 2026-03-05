@@ -6,6 +6,9 @@ import ClientsTestinomials from '../components/ClientsTestinomials';
 import Hero from '../components/Hero';
 import SplitSection from '../components/About/SplitSection';
 import SpliteSectionLeft from '../components/About/SpliteSectionLeft';
+import { scrollCardsData } from '../constants/scrollCardsData';
+import { Helmet } from 'react-helmet-async';
+
 
 const RealEstate = () => {
     const texts = ["REAL ESTATE DEVELOPMENT"];
@@ -28,6 +31,10 @@ const RealEstate = () => {
     ];
     return (
         <>
+              <Helmet>
+        <title>RMAAC</title>
+        <meta name='description' content='Welcome to the site of most moderen world 3d websites will be built for you here'/>
+        </Helmet>
             <div className="headerbackground h-100">
                 <video
                     autoPlay
@@ -89,7 +96,7 @@ const RealEstate = () => {
                 primaryText="We’re not just selling square footage — we’re creating assets that grow with you. If you're looking to invest in projects backed by vision, delivery, and data — start with RMAAC."
                 btntxt="BOOK A STRATEGY Call"
             />
-            <ScrollCards />
+            <ScrollCards cards={scrollCardsData} />
         </>
     )
 }

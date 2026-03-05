@@ -8,6 +8,9 @@ import FAQSection from '../components/FAQSection';
 import ScrollCards from '../components/Cards/ScrollCards';
 import CenteredTexts from '../components/Services/CenteredTexts';
 import useScrollTarget from '../hooks/useScrollTarget';
+import { scrollCardsData } from '../constants/scrollCardsData';
+import { Helmet } from 'react-helmet-async';
+
 const   ItSolutions = () => {
      const texts = ["IT Solutions"];
      useScrollTarget()
@@ -35,6 +38,10 @@ const   ItSolutions = () => {
   return (
     
     <>
+          <Helmet>
+        <title>RMAAC</title>
+        <meta name='description' content='Welcome to the site of most moderen world 3d websites will be built for you here'/>
+        </Helmet>
     <div className="headerbackground h-100">
         <video
           autoPlay
@@ -97,7 +104,7 @@ const   ItSolutions = () => {
     primaryText="Whether you're launching a tech-driven product or upgrading the digital core of your operations, RMAAC brings end-to-end execution. We think in roadmaps, data points, and real-world delivery."
     btntxt="START YOUR DISCOVERY Call"
     onButtonClick={goToContact}/>
-     <ScrollCards/>
+     <ScrollCards cards={scrollCardsData} />
     </>
   )
 }

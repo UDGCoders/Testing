@@ -155,7 +155,7 @@ const CompanySlider = () => {
                 <div className={styles.carouselImageWrapper}>
                   <img
                     src={isActive ? item.activeImage : item.inactiveImage}
-                    alt="Company Logo"
+                    alt=""
                     className={styles.carouselImage}
                   />
                 </div>

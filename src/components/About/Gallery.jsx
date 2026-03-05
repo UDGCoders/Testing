@@ -22,10 +22,10 @@ const Gallery = () => {
         
       </div>
       <div className={`container ${styles.gallery2}`}>
-      <img src={images[0]} alt="Pic 1"className={styles.col} />
-      <img src={images[1]} alt="Pic 2"  className={styles.row} />
-      <img src={images[2]} alt="Pic 3" className={styles.row} />
-      <img src={images[3]} alt="Pic 4" className={styles.col} />
+      <img src={images[0]} alt=""className={styles.col} />
+      <img src={images[1]} alt=""  className={styles.row} />
+      <img src={images[2]} alt="" className={styles.row} />
+      <img src={images[3]} alt="" className={styles.col} />
     </div>
     </>
   );

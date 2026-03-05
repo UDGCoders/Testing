@@ -8,14 +8,52 @@ import SmallTitle from '../components/SmallTitle'
 import PrimaryText from '../components/PrimaryText'
 import PrimaryButton from '../components/PrimaryButton'
 import styles from './OurApproach.module.css'
+import ScrollCards from '../components/Cards/ScrollCards'
+import { Helmet } from 'react-helmet-async'
 
 const OurApproach = () => {
   useScrollTarget()
 
   const navigate = useNavigate()
-
+  const scrollCardsData = [
+  {
+    id: 1,
+    // title: 'Zen',
+    src: '/wp-content/uploads/zen-1.webp',
+    redirectTo: '/singlelayoutpage/zen',
+  },
+  {
+    id: 2,
+    // title: 'Ai vigil',
+    src: '/wp-content/uploads/Property-1Frame-2608283.webp',
+    redirectTo: '/singlelayoutpage/aivigil',
+  },
+  {
+    id: 3,
+    // title: 'ppgp',
+    src: '/wp-content/uploads/Property-1Frame-2608284-1.webp',
+    redirectTo: '/singlelayoutpage/ppgp',
+  },
+   {
+    id: 4,
+    // title: 'vividly',
+    src: '/wp-content/uploads/Property-1Frame-2608284.webp',
+    redirectTo: '/singlelayoutpage/vividly',
+  },
+  {
+    id: 5,
+    // title: 'Digital Marketing',
+    src: '/wp-content/uploads/scootsee-1.webp',
+    redirectTo: '/singlelayoutpage/scootsee',
+  },
+];
 
   return (
+    <>
+          <Helmet>
+        <title>RMAAC</title>
+        <meta name='description' content='Welcome to the site of most moderen world 3d websites will be built for you here'/>
+        </Helmet>
     <div className={styles.page}>
       <div className="headerbackground h-100">
         <video
@@ -40,7 +78,9 @@ const OurApproach = () => {
                     <BigTitle bigTitle="Investment" />
                     <SmallTitle smallTitle="APPROACH" />
                   </div>
+                  <div className="mt-3">
                   <PrimaryText primaryText="We partner where capability meets conviction." />
+                  </div>
                   <BigTitle
                     bigTitle="Beyond Capital:"
                     className={styles.secondaryBigTitle}
@@ -82,7 +122,7 @@ const OurApproach = () => {
                 <BigTitle bigTitle="At RMAAC," />
                 <SmallTitle smallTitle="We believe sustainable ventures are built on three fundamentals:" />
               </div>
-              <div className={styles.investmentPrimaryText}>
+              <div className="mt-3">
                 <PrimaryText primaryText="We selectively invest in or co-build digital-first businesses where our strategic involvement leads to exponential outcomes. Our vertical experience across real estate, healthcare, IT, and product ventures gives us the operational insight needed to support, not just fund, growth." />
               </div>
             </div>
@@ -178,7 +218,9 @@ const OurApproach = () => {
           </div>
         </div>
       </section>
+      <ScrollCards cards={scrollCardsData} />
     </div>
+    </>
   )
 }
 

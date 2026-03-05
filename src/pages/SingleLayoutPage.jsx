@@ -74,14 +74,16 @@ const SingleLayoutPage = ({ pageData = defaultPageData }) => {
           </div>
           <div>
             {topSection.primaryText ? (
-              <PrimaryText primaryText={topSection.primaryText} />
+              <div className={styles.primaryTextSpacing}>
+                <PrimaryText primaryText={topSection.primaryText} />
+              </div>
             ) : null}
           </div>
         </div>
         {topImage.src ? (
           <img
             src={topImage.src}
-            alt={topImage.alt || "Section visual"}
+            alt=""
             className={styles.fullImage}
             loading="lazy"
             decoding="async"
@@ -94,10 +96,10 @@ const SingleLayoutPage = ({ pageData = defaultPageData }) => {
           <div>
             {complexLeft.title ? <BigTitle bigTitle={complexLeft.title} /> : null}
             {complexLeft.subtitle ? <SmallTitle smallTitle={complexLeft.subtitle} /> : null}
-            <div className="mt-3">
-            {complexLeft.primaryText ? (
-              <PrimaryText primaryText={complexLeft.primaryText} />
-            ) : null}
+            <div className={`mt-3 ${styles.primaryTextSpacing}`}>
+              {complexLeft.primaryText ? (
+                <PrimaryText primaryText={complexLeft.primaryText} />
+              ) : null}
             </div>
             {renderListGroup(complexLeft.listGroups)}
           </div>
@@ -105,10 +107,10 @@ const SingleLayoutPage = ({ pageData = defaultPageData }) => {
           <div className={styles.complexRight}>
             {complexRight.title ? <BigTitle bigTitle={complexRight.title} /> : null}
             {complexRight.subtitle ? <SmallTitle smallTitle={complexRight.subtitle} /> : null}
-           <div className="mt-3">
-            {complexRight.primaryText ? (
-              <PrimaryText primaryText={complexRight.primaryText} />
-            ) : null}
+            <div className={`mt-3 ${styles.primaryTextSpacing}`}>
+              {complexRight.primaryText ? (
+                <PrimaryText primaryText={complexRight.primaryText} />
+              ) : null}
             </div>
             {renderListGroup(complexRight.listGroups)}
 
@@ -145,7 +147,7 @@ const SingleLayoutPage = ({ pageData = defaultPageData }) => {
             {section.image?.src ? (
               <img
                 src={section.image.src}
-                alt={section.image.alt || "Section visual"}
+                alt=""
                 className={styles.mediaImage}
                 loading="lazy"
                 decoding="async"
@@ -155,7 +157,9 @@ const SingleLayoutPage = ({ pageData = defaultPageData }) => {
               {section.title ? <BigTitle bigTitle={section.title} /> : null}
               {section.subtitle ? <SmallTitle smallTitle={section.subtitle} /> : null}
               {section.primaryText ? (
-                <PrimaryText primaryText={section.primaryText} />
+                <div className={styles.primaryTextSpacing}>
+                  <PrimaryText primaryText={section.primaryText} />
+                </div>
               ) : null}
               {section.listHeading ? (
                 <h4 className={styles.listHeading}>{section.listHeading}</h4>
@@ -195,7 +199,11 @@ const SingleLayoutPage = ({ pageData = defaultPageData }) => {
             <div className={styles.secondLastSide} key={`${side.heading || "side"}-${sideIndex}`}>
               {side.heading ? <h4 className={styles.listHeading}>{side.heading}</h4> : null}
               {side.subHeading ? <h4 className={styles.listHeading}>{side.subHeading}</h4> : null}
-              {side.primaryText ? <PrimaryText primaryText={side.primaryText} /> : null}
+              {side.primaryText ? (
+                <div className={styles.primaryTextSpacing}>
+                  <PrimaryText primaryText={side.primaryText} />
+                </div>
+              ) : null}
               {side.listHeading ? <h4 className={styles.listHeading}>{side.listHeading}</h4> : null}
               {Array.isArray(side.items) && side.items.length > 0 ? (
                 <ul className={styles.list}>
@@ -214,7 +222,9 @@ const SingleLayoutPage = ({ pageData = defaultPageData }) => {
           {finalSection.title ? <BigTitle bigTitle={finalSection.title} /> : null}
           {finalSection.subtitle ? <SmallTitle smallTitle={finalSection.subtitle} /> : null}
           {finalSection.primaryText ? (
-            <PrimaryText primaryText={finalSection.primaryText} />
+            <div className={styles.primaryTextSpacing}>
+              <PrimaryText primaryText={finalSection.primaryText} />
+            </div>
           ) : null}
         </div>
       </section>

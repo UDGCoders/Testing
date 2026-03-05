@@ -27,7 +27,7 @@ const ImageGrid = () => {
         >
           <img 
             src={activeIndex === index ? item.img2 : item.img1} 
-            alt={`Box ${index}`} 
+            alt={``} 
             className={styles.gridImage}
           />
         </div>

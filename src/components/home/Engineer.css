@@ -3,7 +3,6 @@
     font-weight: 400;
     font-family: 'Italiana';
     line-height: 1.3em;
-    font-display: swap;
     margin: 0;
 }
 .engineered{
@@ -49,10 +48,7 @@
         font-size: 30px !important;
         margin: 0;
     }
-    .engineered{
-        /* flex-direction: column; */
-        /* padding: 0 24px; */
-    }
+
     .engineered .left, .engineered .right{
         width: 100%;
     }
