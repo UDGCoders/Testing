@@ -1,7 +1,7 @@
 {
   "name": "rmaac",
   "version": "0.1.0",
-  "homepage": "https://github.com/UDGCoders/rmaac.git",
+  "homepage": "https://github.com/UDGCoders/Testing",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
