@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import styles from "./CompanySlider.module.css";
+import WordPressImage from "../../WordPressImage";
 
 const companyImages = [
   { id: 1, activeImage: "/wp-content/uploads/rmaac-group-white.avif", inactiveImage: "/wp-content/uploads/Frame-2608373.webp" },
@@ -153,9 +154,9 @@ const CompanySlider = () => {
                 style={{ width: `${slideWidth}%` }}
               >
                 <div className={styles.carouselImageWrapper}>
-                  <img
+                  <WordPressImage
                     src={isActive ? item.activeImage : item.inactiveImage}
-                    alt=""
+                    alt={`Company logo ${item.id}`}
                     className={styles.carouselImage}
                   />
                 </div>

@@ -4,6 +4,7 @@ import SmallTitle from '../SmallTitle'
 import PrimaryText from '../PrimaryText'
 import styles from './SplitSection.module.css'
 import PrimaryButton from '../PrimaryButton'
+import WordPressImage from '../WordPressImage'
 const SplitSection = (props,ref) => {
   const hasMedia = Boolean(props.videoSrc || props.src)
   const reverseOnMobile =
@@ -65,12 +66,10 @@ const SplitSection = (props,ref) => {
                       poster={props.poster}
                     />
                   ) : (
-                    <img
+                    <WordPressImage
                       src={props.src}
-                      alt=""
+                      alt={props.alt || props.bigTitle || props.smallTitle || ''}
                       className={`img-fluid ${styles.image} ${styles.media}`}
-                      loading="lazy"
-                      decoding="async"
                       draggable="false"
                       onDragStart={(e) => e.preventDefault()}
                       onContextMenu={(e) => e.preventDefault()}

@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from './PorfolioCard.module.css'
+import WordPressImage from '../WordPressImage'
 
 const PortfolioCard = ({ imageSrc, imageAlt, title, text }) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageWrap}>
         {imageSrc ? (
-          <img src={imageSrc} alt="" />
+          <WordPressImage src={imageSrc} alt={imageAlt || title || 'Portfolio image'} />
         ) : null}
       </div>
       <div className={styles.content}>

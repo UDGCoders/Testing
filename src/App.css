@@ -1,3 +1,16 @@
+/* Dynamic navbar height is set by Navbar.jsx via CSS variable */
+:root {
+  --app-navbar-height: 96px;
+}
+
+.app-main {
+  padding-top: var(--app-navbar-height);
+}
+
+/* Hero/video sections should start at viewport top under the fixed navbar */
+.app-main .headerbackground {
+  margin-top: calc(var(--app-navbar-height) * -1);
+}
 
 
 /* The container for the video section */
@@ -32,7 +45,6 @@
   width: 100%;
   min-height: 100dvh;
   overflow: hidden;
-  margin-top: -12vh;
   z-index: 0;
 }
 
@@ -88,6 +100,7 @@
 }
 html {
   scroll-behavior: smooth !important;
+  scroll-padding-top: var(--app-navbar-height);
 }
 
 /* Ensure the body isn't hiding the overflow which blocks jumping */

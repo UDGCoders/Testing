@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './ImageGrid.module.css';
+import WordPressImage from '../../WordPressImage';
 
 const ImageGrid = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -25,9 +26,9 @@ const ImageGrid = () => {
           onMouseEnter={() => setActiveIndex(index)}
           onMouseLeave={() => setActiveIndex(null)}
         >
-          <img 
+          <WordPressImage
             src={activeIndex === index ? item.img2 : item.img1} 
-            alt={``} 
+            alt={`Brand tile ${item.id + 1}`}
             className={styles.gridImage}
           />
         </div>

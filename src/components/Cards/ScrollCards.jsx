@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import WordPressImage from '../WordPressImage';
 
 const ScrollCards = ({ cards }) => {
   const navigate = useNavigate();
@@ -132,7 +133,11 @@ const ScrollCards = ({ cards }) => {
               role={isClickable ? 'link' : undefined}
               tabIndex={isClickable ? 0 : undefined}
             >
-              <img src={card.src} alt="" style={imageStyle} />
+              <WordPressImage
+                src={card.src}
+                alt={card.imageAlt || card.title || 'Portfolio card image'}
+                style={imageStyle}
+              />
               {card.title ? <div style={overlayStyle}>{card.title}</div> : null}
             </div>
           );

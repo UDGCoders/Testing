@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./SliderCard.module.css";
+import WordPressImage from "../../WordPressImage";
 
 const SliderCard = ({ title, year, image, active }) => {
   return (
@@ -16,9 +17,10 @@ const SliderCard = ({ title, year, image, active }) => {
       }}
     >
       <div className={styles.content}>
-        <img 
+        <WordPressImage
           src={image} 
           alt={title} 
+          loading="lazy"
           style={{ filter: active ? "invert(1)" : "none" }} 
         />
         <h3>{title}</h3>

@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import styles from './Timeline.module.css';
+import WordPressImage from '../WordPressImage';
 
 const Timeline = () => {
   const containerRef = useRef(null);
@@ -51,23 +52,19 @@ const Timeline = () => {
                 viewport={{ once: true }}
               >
                 {card.image ? (
-                  <img
+                  <WordPressImage
                     src={card.image}
                     alt={card.title || `Timeline visual ${card.id}`}
                     className={styles.cardImg}
-                    loading="lazy"
-                    decoding="async"
                   />
                 ) : (
                   <div className={styles.textPadding}>
                     <h3>{card.title}</h3>
                     <div className={styles.timeMeta}>
                       <div className={styles.timeIconWrap}>
-                        <img
+                        <WordPressImage
                           src="/wp-content/uploads/date.webp"
                           alt="calendar logo"
-                          loading="lazy"
-                          decoding="async"
                         />
                       </div>
                       <div>

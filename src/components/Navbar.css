@@ -52,15 +52,18 @@
 }
 
 .app-navbar {
-    position: relative;
-    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1100;
 }
 
 @media (max-width: 991.98px) {
     .app-navbar {
-        position: sticky;
-        top: 0;
-        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(6px);
     }
 
     .app-navbar-toggler {

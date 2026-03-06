@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./TestimonialCard.module.css";
 import PrimaryText from "../PrimaryText";
+import WordPressImage from "../WordPressImage";
 const TestimonialCard = (props) => {
   return (
     <>
@@ -16,9 +17,9 @@ const TestimonialCard = (props) => {
         <div className="mt-3">
                   <PrimaryText primaryText={props.says} />
         </div>
-        <img
+        <WordPressImage
           src="/wp-content/uploads/Frame-2608293.webp"
-          alt=""
+          alt={`${props.employee || 'Employee'} quotation mark`}
           className={styles.image}
         />
       </div>

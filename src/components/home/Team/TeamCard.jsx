@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './TeamCard.module.css';
+import WordPressImage from '../../WordPressImage';
 
 const TeamCard = ({ name, role, description, img }) => {
     return (
@@ -8,7 +9,7 @@ const TeamCard = ({ name, role, description, img }) => {
             <div className={styles.subCard}>
                 <div className="d-flex gap-4">
                     <div className="image w-25">
-                        <img src={img} alt="" className='rounded-circle img-fluid'/>
+                        <WordPressImage src={img} alt={`${name} profile`} className='rounded-circle img-fluid'/>
                     </div>
                     <div className="text d-flex flex-column justify-content-around">
                         <span className={styles.role}>{role}</span>

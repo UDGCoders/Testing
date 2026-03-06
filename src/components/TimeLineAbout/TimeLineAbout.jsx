@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import BigTitle from "../BigTitle";
 import SmallTitle from "../SmallTitle";
 import styles from "./TimeLineAbout.module.css"; // Import the CSS module
+import WordPressImage from "../WordPressImage";
 
 export default function TimeLineAbout({ items = [] }) {
   const timelineRef = useRef(null);
@@ -88,9 +89,9 @@ export default function TimeLineAbout({ items = [] }) {
                   marginRight: isLeft ? 'auto' : 0,
                 }}>
                   <div className={styles.card}>
-                    <img 
+                    <WordPressImage
                       src={item.image} 
-                      alt="" 
+                      alt={item.title || `Timeline event ${idx + 1}`}
                       className={styles.cardImg} 
                     />
                     <div className={styles.cardContent}>

@@ -2,6 +2,7 @@ import React from "react";
 import BigTitle from "../components/BigTitle";
 import SmallTitle from "../components/SmallTitle";
 import PrimaryText from "../components/PrimaryText";
+import WordPressImage from "../components/WordPressImage";
 import singleLayoutPageData from "../constants/singleLayoutPageData";
 import styles from "./SingleLayoutPage.module.css";
 
@@ -81,12 +82,10 @@ const SingleLayoutPage = ({ pageData = defaultPageData }) => {
           </div>
         </div>
         {topImage.src ? (
-          <img
+          <WordPressImage
             src={topImage.src}
-            alt=""
+            alt={topImage.alt || topSection.title || "Project image"}
             className={styles.fullImage}
-            loading="lazy"
-            decoding="async"
           />
         ) : null}
       </section>
@@ -145,12 +144,10 @@ const SingleLayoutPage = ({ pageData = defaultPageData }) => {
           
           <div className={splitClassName}>
             {section.image?.src ? (
-              <img
+              <WordPressImage
                 src={section.image.src}
-                alt=""
+                alt={section.image.alt || section.title || "Section image"}
                 className={styles.mediaImage}
-                loading="lazy"
-                decoding="async"
               />
             ) : null}
             <div>

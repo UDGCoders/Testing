@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './CeoMeasures.module.css'
 import Counter from '../../Counter'
+import WordPressImage from '../../WordPressImage'
 
 const CeoMeasures = (props) => {
   return (
@@ -35,7 +36,7 @@ const CeoMeasures = (props) => {
                     {/* <Counter title="YEARS OF GROWTH" targetNumber={10} prefix="+"/> */}
                 </div>
                 <div className="col-sm-6 d-flex flex-column justify-content-end">
-                    <img src="/wp-content/uploads/Frame-2608359.webp" alt="" className='img-fluid' loading='lazy' />
+                    <WordPressImage src="/wp-content/uploads/Frame-2608359.webp" alt="Ceo measures visual" className='img-fluid' loading='lazy' />
                     <p className="text-center pb-4">
                         We've been at the forefront of innovation for over 25 years, delivering results that make a real difference for our clients. Our focus is to help the businesses in all aspects of the business, from efficiently utilizing their available resources to improving those resources and building new ones.  
                     </p>

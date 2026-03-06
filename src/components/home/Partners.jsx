@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Partner.module.css';
+import WordPressImage from '../WordPressImage';
 
 const Partners = (props) => {
     return (
@@ -28,7 +29,7 @@ const Partners = (props) => {
                                 </div>
                                 <div className="col-2 d-flex justify-content-end m-0">
                                     <div className="col-md-6">
-                                    <img
+                                    <WordPressImage
                                         src={props.src}
                                         alt="Partnership Visual" loading='lazy'
                                         className={`img-fluid ${styles.staticImage}`}/>

@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import styles from './CaseStudyCard.module.css'
 import CaseStudyHiddenSection from './CaseStudyHiddenSection'
+import WordPressImage from '../WordPressImage'
 
 const CaseStudyCard = ({
   picture,
@@ -49,7 +50,7 @@ const CaseStudyCard = ({
     >
       {picture ? (
         <div className={styles.media}>
-          <img src={picture} alt="" />
+          <WordPressImage src={picture} alt={bigTitle || text || 'Case study image'} />
         </div>
       ) : null}
       <div className={styles.body}>

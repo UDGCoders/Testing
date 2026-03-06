@@ -4,6 +4,7 @@ import SmallTitle from "../SmallTitle";
 import PrimaryText from "../PrimaryText";
 import styles from "./SpliteSectionLeft.module.css";
 import PrimaryButton from "../PrimaryButton";
+import WordPressImage from "../WordPressImage";
 const SpliteSectionLeft = (props) => {
   const hasButtonText =
     typeof props.btntxt === "string"
@@ -33,12 +34,10 @@ const SpliteSectionLeft = (props) => {
                   poster={props.poster}
                 />
               ) : (
-                <img
+                <WordPressImage
                   src={props.src}
-                  alt=""
+                  alt={props.alt || props.bigTitle || props.smallTitle || ""}
                   className={`img-fluid h-100 ${styles.image} ${styles.media} ${props.disableGrayscale ? styles.noGrayscale : ''}`}
-                  loading="lazy"
-                  decoding="async"
                 />
               )}
             </div>

@@ -3,6 +3,7 @@ import BigTitle from "../BigTitle";
 import SmallTitle from "../SmallTitle";
 import styles from "./Gallery.module.css";
 import PrimaryText from "../PrimaryText";
+import WordPressImage from "../WordPressImage";
 const Gallery = () => {
     const images = [
   "/wp-content/uploads/1-1.webp",
@@ -22,10 +23,10 @@ const Gallery = () => {
         
       </div>
       <div className={`container ${styles.gallery2}`}>
-      <img src={images[0]} alt=""className={styles.col} />
-      <img src={images[1]} alt=""  className={styles.row} />
-      <img src={images[2]} alt="" className={styles.row} />
-      <img src={images[3]} alt="" className={styles.col} />
+      <WordPressImage src={images[0]} alt="RMAAC team gallery image 1" className={styles.col} />
+      <WordPressImage src={images[1]} alt="RMAAC team gallery image 2" className={styles.row} />
+      <WordPressImage src={images[2]} alt="RMAAC team gallery image 3" className={styles.row} />
+      <WordPressImage src={images[3]} alt="RMAAC team gallery image 4" className={styles.col} />
     </div>
     </>
   );

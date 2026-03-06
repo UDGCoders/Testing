@@ -1,12 +1,42 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
+import WordPressImage from "./WordPressImage";
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isPortfolioDropdownOpen, setIsPortfolioDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const applyNavbarHeight = () => {
+      const navHeight = navRef.current?.offsetHeight;
+      if (navHeight) {
+        document.documentElement.style.setProperty(
+          "--app-navbar-height",
+          `${navHeight}px`
+        );
+      }
+    };
+
+    applyNavbarHeight();
+    window.addEventListener("resize", applyNavbarHeight);
+
+    let resizeObserver;
+    if (typeof ResizeObserver !== "undefined" && navRef.current) {
+      resizeObserver = new ResizeObserver(applyNavbarHeight);
+      resizeObserver.observe(navRef.current);
+    }
+
+    return () => {
+      window.removeEventListener("resize", applyNavbarHeight);
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      }
+    };
+  }, []);
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
@@ -16,12 +46,12 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg app-navbar">
+      <nav ref={navRef} className="navbar navbar-expand-lg app-navbar pt-3">
         <div className="container pt-3">
           <Link className="navbar-brand" to="/" onClick={closeMobileMenu}>
-            <img
+            <WordPressImage
               src="/wp-content/uploads/Logo-2-1-1.webp"
-              alt=""
+              alt="RMAAC logo"
               loading="lazy"
               className="img-fluid"
             />

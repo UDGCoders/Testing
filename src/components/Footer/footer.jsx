@@ -4,6 +4,7 @@ import PrimaryButton from '../PrimaryButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import WordPressImage from '../WordPressImage';
 const Footer = () => {
     return (
         <>
@@ -11,7 +12,7 @@ const Footer = () => {
                 <div className={`container-fluid px-0 ${styles.footer}`}>
                     <div className="row g-0">
                         <div className="col-sm-5">
-                            <img src="/wp-content/uploads/Logo-2-1-1.webp" loading='lazy' alt="" className='img-fluid' />
+                            <WordPressImage src="/wp-content/uploads/Logo-2-1-1.webp" loading='lazy' alt="RMAAC logo" className='img-fluid' />
                             <p className={`${styles.txtdescription} mt-3 w-75`}>From code to concrete — RMAAC reshapes industries through digital, healthcare, AI, and real estate innovation.</p>
                            <Link to ="/contactpage">
                             <PrimaryButton btntxt="Get Started" />

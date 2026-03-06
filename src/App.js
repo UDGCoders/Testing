@@ -62,27 +62,29 @@ function App() {
     <Router>
       <Navbar />
       <BackgroundDots />
-      <Routes>
-        <Route path="/" element={<PageTitle title="RMAAC"><Home /></PageTitle>} />
-        <Route path="/about" element={<PageTitle title="RMAAC"><About /></PageTitle>} />
-        <Route path="/servicespage" element={<PageTitle title="RMAAC"><Services /></PageTitle>} />
-        <Route path="/itsolutionspage" element={<PageTitle title="RMAAC"><ItSolutions /></PageTitle>} />
-        <Route path="/digitalmarketingpage" element={<PageTitle title="RMAAC"><DigitalMarketing /></PageTitle>} />
-        <Route path="/appdevelopmentpage" element={<PageTitle title="RMAAC"><AppsDevelopment /></PageTitle>} />
-        <Route path="/realestatepgae" element={<PageTitle title="RMAAC"><RealEstate /></PageTitle>} />
-        <Route path="/portfoliopage" element={<PageTitle title="RMAAC"><Portfolio /></PageTitle>} />
-        <Route path="/automationpage" element={<PageTitle title="RMAAC"><Automation /></PageTitle>} />
-        <Route path="/healthcarepage" element={<PageTitle title="RMAAC"><HealthCare /></PageTitle>} />
-        <Route path="/contactpage" element={<PageTitle title="RMAAC"><Contact /></PageTitle>} />
-        <Route path="/realestateportfoliopage" element={<PageTitle title="RMAAC"><Real /></PageTitle>} />
-        <Route path="/ourapproachpage" element={<PageTitle title="RMAAC"><OurApproach /></PageTitle>} />
-        <Route path="/digitalsuccesspage" element={<PageTitle title="RMAAC"><DigitalSuccess/></PageTitle>} />
-        <Route path="/mobilesolutionpage" element={<PageTitle title="RMAAC"><MobileSolution /></PageTitle>} />
-        <Route path="/singlelayoutpage" element={<SingleLayoutRoute />} />
-        <Route path="/singlelayoutpage/:layoutKey" element={<SingleLayoutRoute />} />
-        <Route path="/502" element={<PageTitle title="502 - RMAAC"><Error502 /></PageTitle>} />
-        <Route path="*" element={<PageTitle title="404 - RMAAC"><NotFound /></PageTitle>} />
-      </Routes>
+      <main className="app-main">
+        <Routes>
+          <Route path="/" element={<PageTitle title="RMAAC"><Home /></PageTitle>} />
+          <Route path="/about" element={<PageTitle title="RMAAC"><About /></PageTitle>} />
+          <Route path="/servicespage" element={<PageTitle title="RMAAC"><Services /></PageTitle>} />
+          <Route path="/itsolutionspage" element={<PageTitle title="RMAAC"><ItSolutions /></PageTitle>} />
+          <Route path="/digitalmarketingpage" element={<PageTitle title="RMAAC"><DigitalMarketing /></PageTitle>} />
+          <Route path="/appdevelopmentpage" element={<PageTitle title="RMAAC"><AppsDevelopment /></PageTitle>} />
+          <Route path="/realestatepgae" element={<PageTitle title="RMAAC"><RealEstate /></PageTitle>} />
+          <Route path="/portfoliopage" element={<PageTitle title="RMAAC"><Portfolio /></PageTitle>} />
+          <Route path="/automationpage" element={<PageTitle title="RMAAC"><Automation /></PageTitle>} />
+          <Route path="/healthcarepage" element={<PageTitle title="RMAAC"><HealthCare /></PageTitle>} />
+          <Route path="/contactpage" element={<PageTitle title="RMAAC"><Contact /></PageTitle>} />
+          <Route path="/realestateportfoliopage" element={<PageTitle title="RMAAC"><Real /></PageTitle>} />
+          <Route path="/ourapproachpage" element={<PageTitle title="RMAAC"><OurApproach /></PageTitle>} />
+          <Route path="/digitalsuccesspage" element={<PageTitle title="RMAAC"><DigitalSuccess/></PageTitle>} />
+          <Route path="/mobilesolutionpage" element={<PageTitle title="RMAAC"><MobileSolution /></PageTitle>} />
+          <Route path="/singlelayoutpage" element={<SingleLayoutRoute />} />
+          <Route path="/singlelayoutpage/:layoutKey" element={<SingleLayoutRoute />} />
+          <Route path="/502" element={<PageTitle title="502 - RMAAC"><Error502 /></PageTitle>} />
+          <Route path="*" element={<PageTitle title="404 - RMAAC"><NotFound /></PageTitle>} />
+        </Routes>
+      </main>
 
       <Footer />
     </Router>

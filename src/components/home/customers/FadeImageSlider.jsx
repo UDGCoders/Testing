@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import styles from "./FadeImageSlider.module.css";
+import WordPressImage from "../../WordPressImage";
 
 const FadeImageSlider = ({ images = [], interval = 3000 }) => {
   const [current, setCurrent] = useState(0);
@@ -32,10 +33,10 @@ const FadeImageSlider = ({ images = [], interval = 3000 }) => {
   return (
     <div className={styles.fadeSlider}>
       {validImages.map((img, index) => (
-        <img
+        <WordPressImage
           key={index}
           src={img}
-          alt="Team Member"
+          alt={`Customer ${index + 1}`}
           className={`img-fluid ${styles.fadeImage} ${
             index === current ? styles.active : ""
           }`}

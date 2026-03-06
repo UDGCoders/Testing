@@ -3,6 +3,7 @@ import styles from "./ClientsTestinomials.module.css";
 import BigTitle from "./BigTitle";
 import SmallTitle from "./SmallTitle";
 import PrimaryText from "./PrimaryText";
+import WordPressImage from "./WordPressImage";
 const ClientsTestinomials = (props) => {
   const titleLayoutClass =
     props.titleLayout === "column" ? styles.columnLayout : "";
@@ -22,15 +23,18 @@ const ClientsTestinomials = (props) => {
             <h4 className={styles.cardHeading}> {props.clientName}</h4>
             <PrimaryText primaryText={props.clientReview} />
            <div className="image">
-            <img
+            <WordPressImage
               src="/wp-content/uploads/Frame-2608293.webp"
-              alt="" className="img-fluid"
-              loading="lazy"
-              decoding="async"
+              alt={`${props.clientName || 'Client'} quotation mark`}
+              className="img-fluid"
             /></div>
           </div>
           <div className="animatedpic">
-              <img src="/wp-content/uploads/1.webp" alt="" className={styles.img} loading="lazy" decoding="async"/>
+              <WordPressImage
+                src="/wp-content/uploads/1.webp"
+                alt={`${props.clientName || 'Client'} profile`}
+                className={styles.img}
+              />
           </div>
         </div>
       </div>

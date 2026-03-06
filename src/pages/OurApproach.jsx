@@ -10,6 +10,7 @@ import PrimaryButton from '../components/PrimaryButton'
 import styles from './OurApproach.module.css'
 import ScrollCards from '../components/Cards/ScrollCards'
 import { Helmet } from 'react-helmet-async'
+import WordPressImage from '../components/WordPressImage'
 
 const OurApproach = () => {
   useScrollTarget()
@@ -109,12 +110,10 @@ const OurApproach = () => {
 
           <div className="row align-items-md-center">
             <div className="col-md-6">
-              <img
+              <WordPressImage
                 src="/wp-content/uploads/philosophy.webp"
                 alt="Our Investment Philosophy"
                 className={`img-fluid ${styles.investmentImage}`}
-                loading="lazy"
-                decoding="async"
               />
             </div>
             <div className="col-md-6">

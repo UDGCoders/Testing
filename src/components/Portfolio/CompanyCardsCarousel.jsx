@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import PrimaryText from '../PrimaryText'
 import styles from './CompanyCardsCarousel.module.css'
+import WordPressImage from '../WordPressImage'
 
 const hasText = (value) =>
   typeof value === 'string' ? value.trim().length > 0 : Boolean(value)
@@ -152,12 +153,10 @@ const CompanyCardsCarousel = ({ cards }) => {
             >
               <div className={styles.card}>
                 {hasText(card?.imageSrc) && (
-                  <img
+                  <WordPressImage
                     src={card.imageSrc}
                     alt={card.imageAlt || card.bigTitle || 'Company slide'}
                     className={styles.cardImage}
-                    loading="lazy"
-                    decoding="async"
                   />
                 )}
                 <div className={styles.titleWrap}>

@@ -4,6 +4,7 @@ import styles from "./Reasons.module.css";
 import BigTitle from "./BigTitle";
 import SmallTitle from "./SmallTitle";
 import PrimaryText from "./PrimaryText";
+import WordPressImage from "./WordPressImage";
 
 const Reasons = (props) => {
   // const navigate = useNavigate();
@@ -85,7 +86,7 @@ const Reasons = (props) => {
               >
                 <div className={styles.cardInner}>
                   {card.imageSrc ? (
-                    <img src={card.imageSrc} alt="" />
+                    <WordPressImage src={card.imageSrc} alt={card.imageAlt || card.title || ''} />
                   ) : null}
                   {card.title ? <h2 className={styles.transform}>{card.title}</h2> : null}
                   {card.text ? <p className={styles.transform}>{card.text}</p> : null}
