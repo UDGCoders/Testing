@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/UDGCoders/Testing/static/css/main.b08de33e.css",
+    "main.js": "/UDGCoders/Testing/static/js/main.7a293f95.js",
+    "static/js/453.8de284ec.chunk.js": "/UDGCoders/Testing/static/js/453.8de284ec.chunk.js",
+    "index.html": "/UDGCoders/Testing/index.html",
+    "main.b08de33e.css.map": "/UDGCoders/Testing/static/css/main.b08de33e.css.map",
+    "main.7a293f95.js.map": "/UDGCoders/Testing/static/js/main.7a293f95.js.map",
+    "453.8de284ec.chunk.js.map": "/UDGCoders/Testing/static/js/453.8de284ec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b08de33e.css",
+    "static/js/main.7a293f95.js"
+  ]
+}
