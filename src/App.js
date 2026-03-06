@@ -64,6 +64,7 @@ function App() {
       <BackgroundDots />
       <main className="app-main">
         <Routes>
+          <Route path="" element={<PageTitle title="RMAAC"><Home /></PageTitle>} />
           <Route path="/" element={<PageTitle title="RMAAC"><Home /></PageTitle>} />
           <Route path="/about" element={<PageTitle title="RMAAC"><About /></PageTitle>} />
           <Route path="/servicespage" element={<PageTitle title="RMAAC"><Services /></PageTitle>} />
