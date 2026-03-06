@@ -1,7 +1,7 @@
 {
   "name": "rmaac",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://github.com/UDGCoders/rmaac.git",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
@@ -31,7 +31,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch": "npm-watch",
-    "watch:build": "chokidar \"src/**/*\" -c \"npm run build\""
+    "watch:build": "chokidar \"src/**/*\" -c \"npm run build\"",
+    "deploy":"gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
