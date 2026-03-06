@@ -33,7 +33,7 @@
     "watch": "npm-watch",
     "watch:build": "chokidar \"src/**/*\" -c \"npm run build\"",
     "predeploy": "npm run build",
-"deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
